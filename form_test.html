@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 테스트</title>
+</head>
+<body>
+    
+
+    <form action="search.php" autocomplete="off">
+        <input type="text" title="검색">
+        <input type="submit" value="검색">
+
+    </form>
+
+
+
+    <label for="user-id">비번찾기</label>
+    <input type="text" id="user-id" title="찾아보자">
+
+
+    <hr>
+
+    <form>
+        <h3>수강분야(다수 선택 가능)</h3>
+        <ul style="list-style: none;">
+            <li><input type="checkbox" value="grm">문법</li>
+            <li><input type="checkbox" value="wr">작문</li>
+            <li><input type="checkbox" value="rd">독해</li>
+        </ul>
+        <h3>수강 과목(1과목만 선택 가능)</h3>
+        <ul style="list-style: none;">
+            <li><label><input type="radio" name="subject" value="eng"> <strong>영어회화</strong></label></li>
+            <li><label><input type="radio" name="subject" value="ch"> <strong>중국어회화</strong></label></li>
+            <li><label><input type="radio" name="subject" value="jp"> <strong>일본어회화</strong></label></li>
+
+        </ul>
+        
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul style="list-style: none;">
+                <li>
+                    <label for="name">이 름</label>
+                    <input type="text" id="name" autocomplete="off">
+                </li>
+                <li>
+                    <label for="address">주 소</label>
+                    <input type="text" id="address" autocomplete="off">
+                </li>
+            </ul>
+
+
+        </fieldset>
+    </form>
+
+    <form>
+        <H2>회원 가입</H2>
+        <fieldset>
+            <legend>필수 정보</legend>
+            <ul style="list-style: none;">
+                <li>
+                    <label for="name2">이 름 : </label>
+                    <input type="text" id="name2">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>선택 정보</legend>
+            <ul style="list-style: none;">
+                <li>
+                    <label for="birth">생 일 : </label>
+                    <input type="date   " id="birth">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <form>
+        
+        <input type="hidden" name="이름" value="서버로 넘길 값" autocomplete="off"></input>
+        <input type="text" name="myName" value="안녕하세요" size="2" maxlength="5"></input>
+
+    </form>
+
+
+</body>
+</html>
