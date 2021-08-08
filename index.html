@@ -1,88 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- 현재 사용하는 문자열 세트를 확인시켜줌. -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서원초 줌 접속 주소 안내 페이지</title>
-</head>
-
-<body>
-
-    <div>
-        <h1>서원초등학교 온라인 수업 접속 주소</h1>
-        <h2>
-            <script type="text/javascript" ">
-                var d = new Date();
-                var year = d.getFullYear();
-                var month = d.getMonth() + 1;
-                var date = d.getDate();
-                var day = d.getDay();
-                switch (day) {
-                    case 0:
-                        day = " 일요일"; break; case 1: day = "월요일"; break; case 2: day = "화요일"; break; case 3: day = "수요일"; break; case 4:
-                        day = "목요일"; break; case 5: day = "금요일"; break; case 6: day = "토요일"; break;
-                } var today = `오늘은
-                ${year}.${month}.${date} ${day}입니다.`; document.write(today);</script></h2>
-        <h4>해당하는 학년의 접속 주소를 눌러 주세요.</h4>
-        <hr>
-        <ul>
-            <h4>1학년</h4>
-            <ul><div>
-            접속주소 : <a href="https://zoom.us/j/6326147458?pwd=dFhCWWwvdjRoNktmaDRBSHJrWCtzdz09" target="_blank"  id="1url">1학년 줌 학습방 접속 하기</a><br>
-            밴드주소 : <a href="https://band.us/n/a1a246b9zcR3b" target="_blank"  id="1bandurl">1학년 밴드 접속 하기</a><br>
-            ebs온에어: <a href="http://www.ebs.co.kr/html/onair_tv2.html" target="_blank"  id="1ebsonairurl">1학년 ebs온에어 접속하기</a><br>
-            ebs다시보기 : <a href="https://primary.ebs.co.kr/course/series/list?viewType=image&studyPhaseCode=&sortSequence=4&seriesId=S00096&clsfsSysId=21000009&orderClsfsSysId=" target="_blank"  id="1ebsreplayurl">ebs 다시보기</a>
-            </div> </ul>
-            
-            
-        </ul>
-        <ul>
-            <h4>2학년</h4>
-            <ul><div>
-            접속주소 : <a href="https://us04web.zoom.us/j/79841190393?pwd=VXR4eFlXNVY0U1NIYzJ0RVRhdTNaQT09" target="_blank"  id="2url">2학년 줌 학습방 접속 하기</a><br>
-            밴드주소 : <a href="https://band.us/band/78848206" target="_blank"  id="2bandurl">2학년 밴드 접속 하기</a><br>
-            ebs온에어: <a href="http://www.ebs.co.kr/html/onair_tv2.html" target="_blank"  id="2ebsonairurl">2학년 ebs온에어 접속하기</a><br>
-            ebs다시보기 : <a href="https://primary.ebs.co.kr/course/series/list?viewType=image&studyPhaseCode=&sortSequence=4&seriesId=S00096&clsfsSysId=21000009&orderClsfsSysId=" target="_blank"  id="2ebsreplayurl">ebs 다시보기</a>
-            </div> </ul>
-            
-            
-        </ul>
-        <ul>
-            <h4>3학년</h4>
-            <ul><div>
-            접속주소 : <a href="https://zoom.us/j/3031245937?pwd=Zyt0NVh5VFVYMEhqSktmd3pLb3lsQT09" target="_blank"  id="3url">3학년 줌 학습방 접속 하기</a>
-            </div> </ul>
-            
-            
-        </ul>
-        
-        <ul>
-            <h4>4학년</h4>
-            <ul><div>접속주소 : <a href="https://us02web.zoom.us/j/82314285895?pwd=YXZ1T2dOek1rYThXOXdkalRIUUt4UT09" target="_blank" id="4url">4학년 줌 학습방 접속 하기</a></div></ul>
-            
-        </ul>
-        <ul>
-            <h4>5학년</h4>
-            <ul><div>접속주소 : <a href="https://zoom.us/j/5605331111?pwd=UW04TlF4MGV1S1RQS2tJMEhqSU5LQT09" target="_blank"  id="5url">5학년 줌 학습방 접속 하기</a></div></ul>
-            
-        </ul>
-        <ul>
-            <h4>6학년</h4>
-            <ul><div>접속주소 : <a href="https://us02web.zoom.us/j/2189134422?pwd=V0hyWHpiYTQ2TEVndWRsVzlHRHpxdz09" target="_blank"  id="6url">6학년 줌 학습방 접속 하기</a></div></ul>
-            
-        </ul>
-        <hr>
-        
-    </div>
-
-
-
-    <footer>
-        
-    </footer>
-
     
-</body>
+    <!-- 현재 웹 문서를 최신 표준 모드로 해석하라고 알려줘야함. IE같은 애들 때문에. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 뷰포트 - 브라우저의 디바이스에 대한 정보 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- 다양한 메타 데이터가 들어감. 
+    이는 검색엔진을 고려함에 따름이다.
+    검색 엔진에 따라 참고하는 정보는 달라질 수 있음. -->
+    <meta name="kewords" content="html5, 웹표준">
+    <meta name="description" content="html5를 통해 웹 표준 공부하기">
+    <meta name="author" content="Sang Jun Park">
+    <link rel="favicon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+    <title>HTML 기초 시작 1</title>
+</head>
+<body>
+    <!-- Html Tags
+    ! 
+    html
+    head
+    body -->
+
+    <h1>Entity Code 테스트</h1>
+    <p>그냥 입력하면 이런 글씨가 나옵니다.</p>
+    <p>&copy;</p>
+
+</body>
+</body>
 </html>
