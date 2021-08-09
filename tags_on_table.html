@@ -12,12 +12,12 @@
 		th {
 			padding:15px;   /* 셀 테두리와 내용 사이의 간격(패딩) */
 		}
-		/* tr > td:nth-child(odd) { 
+		tr > td:nth-child(odd) { 
 			width:120px; 
 		}
 		tr > td:nth-child(even) { 
 			width:300px; 
-		} */
+		}
 	</style>
     <title>Tags on Table</title>
   </head>
@@ -79,6 +79,40 @@
             <td>북원초</td>
             <td>소초초</td>
             <td>서원초</td>
+        </tr>
+    </table>
+
+    <h3>일부 셀 합치기</h3>
+    <hr>
+    <p>
+        <code>colspan</code> 태그, <code>rowspan</code> 태그를 활용하여 셀 병합하기
+    </p>
+    <p>
+        <code>caption</code> 태그를 사용하여 중앙정렬된 표 제목 달기. <code>caption</code> 태그 안에는
+        여러 줄이나 태그들을 혼합하여 사용할 수 있다.
+    </p>
+    <p>
+        <code>figcaption</code> 태그는 figure와 caption을 합친 태그다.
+    </p>
+    <table>
+        <caption>
+            <p>hello, world!</p>
+            <strong>Big</strong> world
+        </caption>
+        <tr>
+            <th>이름</th>
+            <td></td>
+            <th>연락처</th>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3"></td>
         </tr>
     </table>
     <footer>
