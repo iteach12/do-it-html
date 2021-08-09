@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Inline level tags on text</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1>Inline level elements</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>An inline element does not start on a new line.</li>
+                <li>An inline element only takes up as much width as necessary.</li>
+                <li>닫는 태그를 생략할 수 없다.</li>
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <p>
+        아래는 inline level의 text 관련 tag입니다.
+    </p>
+    
+    <h3>strong태그, b 태그 - 굵게 표시하기</h3>
+    <hr>
+    <p>
+        눈으로 보기에는 차이가 느껴지지 않지만 구분하는 이유는 화면 낭독기에서의 기능 때문임. 중요도를 더 높이고 싶다면 strong태그를 여러번 겹쳐 쓸 수도 있다.
+    </p>
+    <p>중요한 내용이어서 강조하는 경우에는 <strong>strong</strong>태그를 사용합니다.</p>
+    <p>
+        그냥 강조하여 보여지길 원하는 경우에는 <b>b</b>태그를 사용합니다.
+    </p>
+    <p>
+        여러번 강조하고 싶을 땐 <strong><strong><strong>여러 번 반복</strong></strong></strong>사용할 수 있습니다.
+    </p>
+
+    <h3>em, i 태그 - 이탤릭체 표기</h3>
+    <hr>
+    <p>
+        strong와 마찬가지로 의미상 강조할 때는 em을, 보여지기 위한 표시는 i로 해준다.
+    </p>
+    <p>
+        <strong>em</strong> : <em>글자가 기울어져 보인다. em의 경우 내용상 강조의 의미도 있다.</em>
+    </p>
+    <p>
+        <strong>i</strong> : <i>단순히 글자가 기울어져 보이기 위한 태그는 i를 사용하면 된다.</i>
+    </p>
+
+    <h3>
+        q태그 인용 내용 표시하기
+    </h3>
+    <hr>
+    <blockquote>
+        <h2>웹 접근성</h2>
+        <p>웹의 창시자인 팀 버너스리 <q cite="https://www.daum.net">웹의 힘은 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.</q>라는 말로 웹 접근성을 설명한다.</p>
+    </blockquote>
+
+    <h3>
+        mark태그 형광펜
+    </h3>
+    <hr>
+    <p>
+        mark태그는 선택한 부분의 배경색이 노란색이 되며 형광펜으로 그어놓은 듯한 효과를 낸다.
+    </p>
+    <p>예를 들어 <mark style='background-color:coral'>키보드</mark>에 마크 태그를 이용하면 다음과 같이 보여진다. 물론 이 mark태그에 의한 스타일은 변경할 수 있겠지.</p>
+    <p>CSS의 background-color 속성을 사용해 배경색을 변경할 수 있다. 기본은 노란색.</p>
+
+    <h3>span태그</h3>
+    <hr>
+    <p>
+        태그만으로는 의미가 없다. 하지만 줄바꿈 없이 텍스트를 묶어서 스타일 효과를 부여하기 위해 사용하는 경우가 대부분.
+    </p>
+    <p>
+        스타일을 위해 inline에서 묶을 때는 span을, 단락을 통째로 묶고 싶을 때는 div를 이용한다고 보면 된다. div는 block level element니까.
+    </p>
+
+    <footer>
+        <p>Author: SangJun Park<br>
+            <a href="iteach12@gmail.com">iteach12@gmail.com</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Block level tags on text</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote>
+        <h1>Block level elements</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>블록 수준 요소는 항상 새 줄에서 시작합니다.(A block-level element always starts on a new line.)</li>
+                <li>블록 수준 요소는 항상 사용 가능한 전체 너비를 차지합니다.(가능한 왼쪽과 오른쪽으로 늘어남.) A block-level element always takes up the full width available (stretches out to the left and right as far as it can).</li>
+                <li>블록 수준 요소에는 위쪽 및 아래쪽 margin이 있는 반면 인라인 요소에는 없습니다. A block level element has a top and a bottom margin, whereas an inline element does not.</li>
+            </ul>
+        </p>
+    </blockquote>
+    
+    <p>
+        아래는 block level의 text 관련 tag입니다.
+    </p>
+    <h3>hn 제목</h3>
+    <hr />
+    <p>1~6까지 숫자를 넣어서 크기를 구분한다.</p>
+
+    <h3>P단락</h3>
+    <hr />
+    <p>
+      p는 paragraph를 의미합니다. 텍스트 덩어리로 취급하며 브라우저의 크기에
+      따라서 줄바꿈이 일어난 것 처럼 보이지만, 실제로는 하나의 덩어리로
+      취급합니다. <br />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Reprehenderit, aut laborum reiciendis, vel cum, porro beatae nulla
+      similique maxime delectus quaerat quis quos consectetur numquam
+      mollitia<br />
+      nostrum earum repudiandae soluta!
+    </p>
+
+    <h3>br 줄바꿈</h3>
+    <hr />
+    <p>줄바꿈은 br. 닫는 기호는 없다. break의 줄임말.</p>
+
+    <h3>hr 수평선</h3>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nam
+      maiores, qui reprehenderit earum vitae tempore quis porro, totam, suscipit
+      harum voluptatem similique consectetur debitis ullam dolor reiciendis sed
+      fugit.
+    </p>
+    <p>
+      수평선에는 기본적으로 선이 그어진다. css로 없앨 수 있다. 분위기 전환용으로
+      사용한다.
+    </p>
+
+    <h3>인용문 blockquote</h3>
+    <hr />
+    <p>인용문은 텍스트보다 안쪽으로 들여쓰기가 가능하다.</p>
+    <blockquote>
+      대나무는 빨리 치솟으려는 욕망을 누르고 마디의 층을 만든다. 제대로 성자하기
+      위해. - 김경집
+    </blockquote>
+    <p>
+      이렇게 하면 인용문은 일반 텍스트와 구분이 된다. 하지만 기본 디자인은
+      아무것도 없네..??
+    </p>
+    <p>
+      cite 속성을 넣으면 해당 인용문구의 출처를 표시할 수 있다?
+    </p>
+
+
+    <h3>pre preformat의 줄임말</h3>
+    <p>pre태그는 소스에 표시한 공백이 브라우저에 그대로 표시됨.</p>
+    <pre>
+띄어쓰기가 그대로 표시되는 pre태그입니다.      띄어쓰기를 여러번 하면 그것이 그대로             보여지나봅니다. 그리고 엔터를 쳐서
+줄바꿈을 하면
+그것도 그래도
+보여집니다. 말 그대로 타이핑해 둔 그대로 보여지는군요.
+</pre
+    >
+    <p>
+      하지만 웹 접근성을 고려해야 합니다. 왜냐하면 웹 문서를 소리내어 읽어주거나
+      점자로 표시해주는 기계는 pre태그를 건너띄기 때문입니다.
+    </p>
+
+
+
+  </body>
+  <footer>
+    <p>Author: SangJun Park<br>
+        <a href="iteach12@gmail.com">iteach12@gmail.com</a></p>
+</footer>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+		table, th, td {
+			border:1px solid #ccc;
+		}		
+		th {
+			padding:15px;   /* 셀 테두리와 내용 사이의 간격(패딩) */
+		}
+		/* tr > td:nth-child(odd) { 
+			width:120px; 
+		}
+		tr > td:nth-child(even) { 
+			width:300px; 
+		} */
+	</style>
+    <title>Tags on Table</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home &#128536;</a>
+    
+    <blockquote>
+        <h1>Tags on table</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>table, tr, td, th 태그들</li>
+                <li>caption, figcaption 태그들</li>
+                <li>thead, tbody, tfoot 태그들</li>
+
+            </ul>
+        </p>
+    </blockquote>
+    
+    <p>
+        아래는 table관련 tag입니다.
+    </p>
+    <h3>기본적인 표 만들기</h3>
+    <hr>
+    <p>
+        <ol>
+            <li>
+                <code>table</code> 태그를 이용해서 전체적인 윤곽을 만든다.
+            </li>
+            <li>
+                <code>tr</code> 태그로 행을 만든다.
+            </li>
+            <li>
+                <code>td</code> 태그로 각 행마다 셀을 만든다.
+            </li>
+            <li>
+                각 셀에 들어갈 내용은 <code>td</code> 태그에 넣는다.
+            </li>
+            <li>
+                <code>th</code> 태그를 이용하여 행의 제목을 붙여 준다.
+            </li>
+            <li>
+                <code>colespan</code> 태그, <code>rowspan</code> 태그를 활용하여 행이나 열을 합친다.
+            </li>
+        </ol>
+
+    </p>
+    <p><b>예시 테이블</b></p>
+    <table>
+        <tr >
+            <th>이름</th>
+            <td>박유림</td>
+            <td>박시환</td>
+            <td>박예환</td>
+        </tr>
+        <tr>
+            <th>학교</th>
+            <td>한솔초</td>
+            <td>북원초</td>
+            <td>소초초</td>
+            <td>서원초</td>
+        </tr>
+    </table>
+    <footer>
+      <p>
+        Author: SangJun Park<br />
+        <a href="iteach12@gmail.com">iteach12@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
