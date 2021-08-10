@@ -15,3 +15,8 @@ code {
   font-weight: bolder;
   border-radius: 5px;
 }
+
+.table__text thead th {
+  background: #ccc;
+  border: 1px solid #222;
+}
