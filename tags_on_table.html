@@ -12,12 +12,7 @@
 		th {
 			padding:15px;   /* 셀 테두리와 내용 사이의 간격(패딩) */
 		}
-		tr > td:nth-child(odd) { 
-			width:120px; 
-		}
-		tr > td:nth-child(even) { 
-			width:300px; 
-		}
+		
 	</style>
     <title>Tags on Table</title>
   </head>
@@ -94,6 +89,12 @@
     <p>
         <code>figcaption</code> 태그는 figure와 caption을 합친 태그다.
     </p>
+    <p>
+        <code>figure</code> 태그는 겉을 감싸고, <code>figcaption</code> 태그로 figure의 제목(caption)을 붙여주는구만. 표 말고도 이용할 수 있다고 함.
+    </p>
+    <p>
+        <code>rowspan</code> 태그와 <code>colspan</code> 태그는 같은 종류 안에서만 사용할 수 있다. 예를 들면, tbody 안에서만, 또는 tfoot 안에서만 셀 병합이 가능하다. tbody에서 시작해서 tfoot의 셀을 병합할 순 없다.
+    </p>
     <table>
         <caption>
             <p>hello, world!</p>
@@ -115,6 +116,114 @@
             <td colspan="3"></td>
         </tr>
     </table>
+    <hr>
+    <figure>
+        <figcaption>
+            <p>국내에서 자주 사용되던 <b>모던 브라우저</b>입니다.</p>
+        </figcaption>
+        <table>
+        
+        <tr>
+            <th>이름</th>
+            <td></td>
+            <th>연락처</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3"></td>
+        </tr>
+        </table>
+    </figure>
+    <hr>
+    <table>
+        <tr>
+          <td rowspan="2">자산: 현금, <br>현금외 자산</td>
+          <td>부채: 차입금</td>
+          
+        </tr>
+        <tr>
+          <td>자본: 자본금, 이익잉여금</td>
+          
+        </tr>
+      </table>
+
+      <hr>
+      <h3>
+          thead, tbody, tfoot 태그
+      </h3>
+      <hr>
+      <p>
+          thead는 제목, tbody는 본문, tfoot는 요약부문을 의미한다.
+      </p>
+      <hr>
+
+      <figure>
+          <figcaption>
+            <p><strong>우리고장</strong>학교 소개</p>
+          </figcaption>
+          <table>
+          
+            <colgroup>
+            <col style="background-color: beige;">
+            <col span="2" style="background-color: orange;">
+            <col span="2" style="background-color: red;">
+            </colgroup>
+            <thead>
+              <tr style="background-color:blue;">
+                  <th>구분</th>
+                  <th>학교수</th>
+                  <th>학급수</th>
+                  <th>학생수</th>
+                  <th>교원수</th>
+              </tr>
+              
+            </thead>
+            <tbody>
+              <tr>
+                  <th>유치원</th>
+                  <td colspan="4">12</td>
+                  
+              </tr>
+              <tr>
+                  <th>초등학교</th>
+                  <td rowspan="2">23</td>
+                  <td colspan="2">122</td>
+                                    <td>78</td>
+              </tr>
+              <tr>
+                  <th>중학교</th>
+                  
+                  <td>345</td>
+                  <td>567</td>
+                  <td>789</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>합계</th>
+                <td>2030</td>
+                <td rowspan="2">221</td>
+                <td>5323</td>
+                <td>8584</td>
+              </tr>
+              <tr>
+                <th>합계</th>
+                <td>2030</td>
+                <td>221</td>
+                <td>5323</td>
+                
+              </tr>
+            </tfoot>
+        </table>      
+      </figure>
+      
+
+
     <footer>
       <p>
         Author: SangJun Park<br />

@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>텍스트 관련 태그 시험1</title>
+    <style>
+      table {
+        width: 50%;
+        border: 1px solid #222;
+        border-collapse: collapse;
+      }
+      thead {
+        background: #eee;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -43,5 +59,33 @@
     <hr />
     <h1>Education</h1>
     <hr />
+    <table>
+      <caption>
+        <p>학력사항</p>
+      </caption>
+      <colgroup></colgroup>
+      <thead>
+        <tr>
+          <th>출신학교</th>
+          <th>전공</th>
+          <th>기간</th>
+          <th>구분</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>고려대학교</td>
+          <td>컴퓨터공학과</td>
+          <td>2005.03.~2009.02.</td>
+          <td>졸업</td>
+        </tr>
+        <tr>
+          <td>8사단</td>
+          <td>신병교육대</td>
+          <td>2009.02~2011.06</td>
+          <td>졸업</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
