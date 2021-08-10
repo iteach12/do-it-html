@@ -11,16 +11,19 @@
     <a href="/index.html">&laquo; home</a>
     
     <blockquote cite="https://www.daum.net">
-        <h1>Tags on Image</h1>
+        <h1 id="top__image__page">Tags on Image</h1>
         <hr>
         <p>
             <ul>
                 <li>img</li>
-                
+                <li>a</li>
+                <li>앵커</li>
+                <li>image map</li>
                 
             </ul>
         </p>
     </blockquote>
+    <a href="#bottom__image__page">Footer로 이동</a>
     <h3>img Tag</h3>
     <p>
       src 속성으로 이미지 파일 경로 지정하기
@@ -33,18 +36,10 @@
     </p>
     <p>float는 텍스트의 left나 right에 img를 위치시킬 수 있는 속성. 그런데 어떤 경우 사용하는지 잘 이해가 안간다.</p>
 
-
-    
       <img src="https://newcdn.mowplayer.com/689084892688/2021/06/17/thumbnails/mnmjmayd3wl25akk.jpg" alt="battlefield2042" style="width:1000px;height:700px;">
-    
-
     <p>
-      
       <img src="https://d2ofqe7l47306o.cloudfront.net/games/1920x1080/battlefield-2042-11.jpg" alt="helli" style="width:300px;height:200px;">
-      
-      
     </p>
-
     <hr>
     <h3>링크 만들기</h3>
     <table class="table__text">
@@ -89,10 +84,10 @@
 
     <hr>
     <h3>target 속성</h3>
-    <table>
+    <table class="table__text">
       <thead>
-        <th></th>
-        <th></th>
+        <th>구분</th>
+        <th>내용</th>
 
       </thead>
       <tbody>
@@ -114,7 +109,84 @@
         </tr>
       </tbody>
     </table>
-    <footer>
+    <hr>
+    <h3>앵커 만들기</h3>
+    <p>
+      앵커는 한 페이지 내부에서 이동할 수 있는 기능을 말한다. 목차를 누르면 해당하는 위치로 이동하듯.
+    </p>
+    <p>
+      목적지에 id를 생성해준다. id="goal__move" 와 같이.. <br>
+      앵커는 <code>a</code> 태그를 이용하는데, <code>href</code> 태그에 #을 넣고 목적지의 id를 넣어주면 된다.
+    </p>
+    <a href="#top__image__page">Tags on Image로 이동</a>
+
+    <hr>
+    <h3>image map</h3>
+    <p>
+      하나의 이미지에 하나의 링크?! image map을 사용하면 하나의 이미지에 여러개의 링크를 걸 수 있다.
+    </p>
+    <p>이미지 상의 클릭 위치를 다르게 하여 각각의 위치마다 다른 링크를 부여.</p>
+    <p>
+      <code>map</code> 태그를 이용해서 image map을 일단 만든다. 맵 이름도 지정해주고 나서, 맵 안에 <code>area</code> 태그로 영역을 생성해준다.
+    </p>
+   
+    <table class="table__text">
+      <caption>area태그의 속성들</caption>
+      <thead>
+        <th>속성</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>alt</th>
+          <td>대체 텍스트를 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>coords</th>
+          <td>링크로 사용할 영역을 시작 좌표와 끝 좌표를 이용해 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>download</th>
+          <td>링크를 클릭했을 때 링크 문서를 다운로드 합니다.</td>
+        </tr>
+        <tr>
+          <th>href</th>
+          <td>링크 문서(사이트) 경로를 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>media</th>
+          <td>링크 문서(사이트)를 어떤 미디어에 최적화시킬지 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>rel</th>
+          <td>현재 문서와 링크 문서 사이의 관계를 지정합니다.</td>
+          <th rowspan="3">속성 값</th>
+          <td>lternate, bookmark, help, license, next, nofollow, noreferer, prefetch, prey, search, tag</td>
+        </tr>
+        <tr>
+          <th>shape</th>
+          <td>링크로 사용할 영역의 형태를 지정합니다.</td>
+          
+          <td>default, rect, circle, poly</td>
+        </tr>
+        <tr>
+          <th>target</th>
+          <td>링크를 표시할 대상을 지정합니다.</td>
+          <td>_blank, _parent, _self, _top, 프레임 이름</td>
+        </tr>
+        <tr>
+          <th>type</th>
+          <td>링크 문서의 미디어 유형을 지정합니다.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <map name="daum">
+      <area shape="rect" coords="0, 0, 80, 100" href="https://www.daum.net" alt="다음" target="_blank">
+    </map>
+
+    <img src="https://blog.kakaocdn.net/dn/XlNeu/btq6ZUzVeTA/UtCgENpc3PPeTdJAPfWIF1/img.webp" alt="다음" usemap="#daum">
+    <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
   </footer>  
