@@ -35,7 +35,7 @@
         </p>
     </blockquote>
     
-    <h3>form 만들기</h3>
+    <h1>form, input</h1>
     <p>
       <code>form</code> 태그를 이용해서 틀을 만들어 둔다. 그리고 그 태그 안에 다양한 폼 요소들을 넣어준다.
     </p>
@@ -324,11 +324,164 @@
       </label>
       <input type="file">
     </fieldset>
+    <hr>
+    <h1>데이터 나열해 보여주기</h1>
+    <fieldset>
+      <legend>
+        select, optgroup, option
+      </legend>
+      <ol>
+        <li><label for="myselect">select</label>
+          <select name="myselect" id="myselect">
+            <option value="assault">어썰트</option>
+            <option value="medic">메딕</option>
+            <option value="sniper">스나이퍼</option>
+            <option value="engeener" selected>엔지니어</option>
+            <option value="commander">지휘자</option>
+          </select>
+          <br>
+          <br>
+          <table>
+            <thead>
+              <th>속성</th>
+              <th align="center">설명</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>size</th>
+                <td>화면에 표시될 드롭다운 메뉴의 항목 개수를 지정.</td>
+              </tr>
+              <tr>
+                <th>multiple</th>
+                <td>브라우저 화면에 여러 개의 옵션이 함께 표시되면서 <code>ctrl</code> 키를 누른 상태로 드롭다운 메뉴에 있는 여러 항목을 선택할 수 있다.</td>
+              </tr>
+            </tbody>
+          </table></li>
+        <li>
+          <label>option
+            <table>
+              <thead>
+                <th>속성</th>
+                <th align="center">설명</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>value</th>
+                  <td>옵션을 선택했을 때 서버로 넘겨질 값을 지정.</td>
+                </tr>
+                <tr>
+                  <th>selected</th>
+                  <td>화면에 표시될 때 기본으로 선택되어 있는 옵션을 지정.</td>
+                </tr>
+              </tbody>
+            </table>
+          </label>
 
+        </li>
+        <li>
+          <label>optgroup
+            <select>
+              <optgroup label="병과">
+                <option value="assault">어썰트</option>
+            <option value="medic">메딕</option>
+            <option value="sniper">스나이퍼</option>
+            <option value="engeener" selected>엔지니어</option>
+            <option value="commander">지휘자</option>
+              </optgroup>
+              <optgroup label="무기">
+                <option value="sword">sword</option>
+            <option value="gun">gun</option>
+            <option value="rifle">rifle</option>
+            <option value="dagger" selected>dagger</option>
+            
+              </optgroup>
+            </select>
+          </label>
 
+        </li>
+      </ol>
+      
+      
+      
+    </fieldset>
+    <hr>
+    <h1>progress, meter</h1>
+    <p>
+      <code>progress</code> 태그는 작업 진행 상태를 나타낼 때 사용하는 태그. 작업 시작을 0으로 하고, 최종 완료를 최댓값으로 해 얼마나 진척되었는지 숫자로 표현.
+    </p>
+    <table>
+      <thead>
+        <th>속성</th>
+        <th align="center">설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>value</th>
+          <td>작업 진행 상태를 나타내며 부동 소수점으로 표현. 이 값은0보다 크거나 같고 max 값보다 작거나 같아야 함. 만약 max값이 지정되지 않았다면 이 값은 1.0보다 작아야 함.</td>
+        </tr>
+        <tr>
+          <th>max</th>
+          <td>작업이 완료되려면 얼마나 많은 작업을 해야 하는지 부동 소수점으로 표현. 이 값은 0보다 커야 함.</td>
+        </tr>
+      </tbody>
+    </table>
+    <label for="myprogress">진행률</label>
+    <progress id="myprogress" value="50" max="100"> </progress>
+    <hr>
+    <p>
+      <code>meter</code> 태그는 프로그레스와는 다르다. 프로그레스가 진척도를 보여주는 것이라면 meter는 그냥 현 상태를 보여준다. 
+    </p>
+    <table>
+      <thead>
+        <th>속성</th>
+        <th align="center">설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>min, max</th>
+          <td>범위의 최솟값과 최댓값을 나타냅니다. 값을 정하지 않으면 0과 1로 간주됩니다.</td>
+        </tr>
+        <tr>
+          <th>value</th>
+          <td>범위 내에서 차지하는 값을 나타냅니다.</td>
+        </tr>
+        <tr>
+          <th>low</th>
+          <td>"이 정도면 낮다"라고 할 정도의 값을 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>high</th>
+          <td>"이 정도면 높다"라고 할 정도의 값을 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>optimum</th>
+          <td>"이 정도면 적당하다"라고 할 정도의 범위를 지정합니다. optimum값이 high 값보다 크다면 value값이 클수록 좋고 optimum값이 low보다 작다면 value값이 작을수록 좋습니다.</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <h3>meter 연습</h3>
+    <ul style="list-style:none;">
+      <li>
+        <label>진행률 80%
+          <meter value="0.8">
+          <!-- 그냥 일반 값을 다이렉트로 넣은 경우 -->
+          </meter>  
+        </label>
 
-
-
+      </li>
+      <li>
+        <label>사용량 20%
+          <meter value="20" min="0" max="100" optimum="90" high="80" low="10"></meter>
+        </meter>
+        </label>
+      </li>
+      <li>
+        
+      </li>
+      <li></li>
+    </ul>
 
 
 
