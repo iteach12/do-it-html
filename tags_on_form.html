@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      table{
+        border:1px solid #222;
+        border-collapse:collapse;
+      }
+      th, td{
+        border:1px solid #222;
+      }
+      
+    </style>
+    <title>Tags on Form</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">Tags on Image</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>폼 만들기</li>
+                <li>input 태그</li>
+                <li>input태그의 속성들</li>
+                <li>데이터 나열해 보여주기</li>
+                <li>기타 폼 요소들</li>
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h3>form 만들기</h3>
+    <p>
+      <code>form</code> 태그를 이용해서 틀을 만들어 둔다. 그리고 그 태그 안에 다양한 폼 요소들을 넣어준다.
+    </p>
+    <p><code>label</code> 태그를 사용하면 텍스트만 클릭해도 그 안의 라디오나 체크 버튼이 선택된다. 대부분의 폼에서 이런 방식으로 이용.</p>
+    <p>
+      <code>fieldset</code> 폼 요소 그룹으로 묶는 태그, <code>legend</code> 태그 - fieldset에 제목 넣어주기
+    </p>
+    <table>
+      <tr>
+        <th>속성</th>
+        <th  colspan="2">설명</th>
+      </tr>
+      <tr>
+        <tr>
+          <th rowspan="3">method</th>
+          <td colspan="2">사용자가 입력한 내용들을 서버 쪽 프로그램으로 어떻게 넘겨줄지 지정합니다.</td>
+          
+        </tr>
+        <tr>
+          
+          <th rowspan="2" id="abc">속성 값</th>
+          <td>get - 주쇼 표시줄에 사용자가 입력한 내용이 그대로 드러납니다. 256byte~4096byte까지의 데이터만 서버로 넘길 수 있습니다.</td>
+        </tr>
+        <tr>
+          
+          <td>post - 대부분 이 방식을 사용합니다. 사용자의 입력을 표준 입력(standard input)으로 넘겨주기 때문에 입력 내용의 길이에 제한을 받지 않고 사용자가 입력한 내용이 드러나지 않습니다.</td>
+        </tr>
+        <tr>
+          <th>name</th>
+          
+          <td colspan="2">폼의 이름을 지정합니다. 한 문서 안에 여러 개의 form 태그가 있을 경우, 폼들을 구분하기 위해 사용합니다.</td>
+        </tr>
+        <tr>
+          <th>action</th>
+          
+          <td colspan="2">form태그 안의 내용들을 처리해 줄 서버 상의 프로그램을 지정합니다.</td>
+        </tr>
+        <tr>
+          <th>target</th>
+          
+          <td colspan="2">action속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에 열도록 지정합니다.</td>
+        </tr>
+      </tr>
+    </table>
+    <hr>
+    <h5>기본 검색창 1</h5>
+    <form action="search.php" method="post">
+      <input type="text" title="검색하기">
+      <input type="submit" value="검색">
+    </form>
+    <h5>label 태그 붙이기(제목)</h5>
+    <label for="myinput">확인해주세요.</label>
+    <input id="myinput" type="submit" value="OK">
+    <h5>label 태그로 한 번에 선택하기</h5>
+    <form>
+      <h4>수강 과목</h4>
+      <ul style="list-style:none;">
+        <li><input type="checkbox" name="subject1" id="subject1">HTML</li>
+        <li><input type="checkbox" name="subject1" id="subject2">CSS</li>
+        <li><input type="checkbox" name="subject1" id="subject3">JavaScript</li>
+      </ul>
+      <h4>선택 과목</h4>
+      <ul style="list-style:none;">
+        <li><label><input type="radio" name="select1" id="select1">Kotlin</label></li>
+        <li><label><input type="radio" name="select1" id="select2">Java</label></li>
+        <li><label><input type="radio" name="select1" id="select3">Python</label></li>
+      </ul>
+    </form>    
+
+    <hr>
+    <h4>fieldset 사용하기</h4>
+    <fieldset>
+      <legend>battlefield 2042</legend>
+      <ul style="list-style:none;">
+        <li>
+          <label for="battle1">병과</label>
+          <input id="battle1" type="text"></li>
+        <li>
+          <label for="battle2">주무기</label>
+          <input type="text"></li>
+      </ul>
+    </fieldset>
+    <hr>
+    <h4>input태그 연습</h4>
+    <fieldset>
+      <legend>input태그연습</legend>
+      <ul style="list-style:none;">
+        <li><input type="text" id="mytext" size="25" maxlength="10" value="안녕하세요."></li>
+        <li><input type="test" id="myaddr" size="60" maxlength="10"></li>
+      </ul>
+      
+      <p>
+        <code>size</code> 속성은 input 폼의 길이
+      </p>
+      <p>
+        <code>maxlength</code> 속성은 입력할 데이터의 길이제한
+      </p>
+    </fieldset>
+    <hr>
+    <h4>
+      <code>input</code> 태그의 다양한 타입 확인
+    </h4>
+    <fieldset>
+      <legend>
+        text, password
+      </legend>
+      <label>이름 : 
+        <input type="text" >
+      </label>
+      <label>비밀번호 : 
+        <input type="password">
+      </label>
+      <input type="submit" value="로그인">
+
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>search</legend>
+      <input type="search">
+      <input type="submit" value="검색">
+      <p>검색어를 입력하면 자동으로 x 아이콘이 생성된다.</p>
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        url, email, tel
+      </legend>
+      <ul>
+        <li>
+          <label for="myurl">url입력</label>
+          <input type="url" id="myurl" size="25">
+          <input type="submit" value="확인">
+        </li>
+        <li>
+          <label for="myemail">email입력</label>
+          <input type="email" id="myemail" size="25">
+          <input type="submit" value="확인">
+        </li>
+        <li>
+          <label for="mytel">tel입력</label>
+          <input type="tel" id="mytel" size="25">
+          <input type="submit" value="확인">
+        </li>
+      </ul>
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        number
+      </legend>
+      <input type="number" min="0" max="10" value="1">
+      <p>
+        입력창에 커서를 두면 위, 아래 화살표(스핀박스)가 생성된다.
+      </p>
+      <p>min, max, value 속성 가능</p>
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        range
+      </legend>
+      <input type="range" min="0" max="10" value="5" step="2">
+      <table>
+        <thead>
+          <th>속성</th>
+          <th>설명</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>min</th>
+            <td>필드에 입력할 수 있는 최솟값을 지정. type="range"일 때 기본 최솟값은 0이다.</td>
+          </tr>
+          <tr>
+            <th>max</th>
+            <td>필드에 입력할 수 있는 최댓값을 지정합니다. type="range"일 때 기본 최댓값은 100이다.</td>
+          </tr>
+          <tr>
+            <th>step</th>
+            <td>짝수나 홀수 등 특정 숫자로 제한하려고 할 때 숫자 간격을 지정할 수 있다. 기본 값은 1이며 생략할 수 있다.</td>
+          </tr>
+          <tr>
+            <th>value</th>
+            <td>필드에 표시할 초기값</td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        checkbox, radio
+      </legend>
+      <h4>
+        checkbox
+      </h4>
+      <ul style="list-style:none;">
+        <li><input type="checkbox" value="assault" checked>어썰트</li>
+        <li><input type="checkbox" value="engeener">엔지니어</li>
+        <li><input type="checkbox" value="medic" >메딕</li>
+      </ul>
+      <h4>
+        radio
+      </h4>
+      <ul style="list-style:none;">
+        <li><input type="radio" name="respawn1" value="A" checked>A</li>
+        <li><input type="radio" name="respawn1" value="B">B</li>
+        <li><input type="radio" name="respawn1" value="C">C</li>
+      </ul>
+      
+      <table>
+        <thead>
+          <th>속성</th>
+          <th>설명</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>name</th>
+            <td>여러 개의 입력 폼이 있을 때 구분하기 위해 name을 적어준다. 특히, radio는 같은 name을 사용해야 묶어줄 수 있다.</td>
+          </tr>
+          <tr>
+            <th>value</th>
+            <td>필수요소. 사용자가 선택한 것을 서버로 넘겨줄 값을 지정해 놔야 한다. 그래야 약속한 대로 서버가 받아들이겠지?</td>
+          </tr>
+          <tr>
+            <th>checked</th>
+            <td>라디오 버튼의 초기 선택값</td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        color
+      </legend>
+      <input type="color">
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        date, month, week
+      </legend>
+      <h3>조회기간 선택</h3>
+      <label>시작
+        <input type="week">
+      </label>
+      <label>종료
+        <input type="week">
+      </label>
+      
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        submit, reset, image(submit대체)
+      </legend>
+      <h3>메일링 리스트 등록</h3>
+      <form>
+        <label>메일 주소
+          <input type="text" minlength="3">
+        </label>
+        <input type="image" src="/enter.png" alt="enter">
+        <!-- <input type="submit" value="제출"> -->
+        <input type="reset" value="다시입력">
+        
+      </form>
+      
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        button
+      </legend>
+      <label>
+        버튼 기능
+      </label>
+      <input type="button" value="새 창 열기" onclick="window.open()">
+    </fieldset>
+    <hr>
+    <fieldset>
+      <legend>
+        file
+      </legend>
+      <label>
+        file 기능
+      </label>
+      <input type="file">
+    </fieldset>
+
+
+
+
+
+
+
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
