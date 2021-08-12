@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      li {
+			line-height:50px;
+		  } 
+      label {
+        width:60px;
+        float:left;
+      }
+      ul{
+        list-style:none;
+      }
+    </style>
+    <title>Test of Form</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">Test of Form</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>예약정보 페이지</li>
+                <li>개발자 지원서</li>
+                
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h3>예약 정보</h3>
+    <hr>
+    <form>
+      <ul>
+        <li>
+          <label for="myname">이 름</label>
+          <input type="text" id="myname"></li>
+        <li><label for="mytel">휴대폰</label>
+          <input type="tel" id="mytel"></li>
+        <li><label for="myemail">이메일</label>
+          <input type="email" id="myemail"></li>
+        <li>
+          <input type="submit" value="예약하기">
+        </li>
+      </ul>
+      
+    </form>
+
+    <h3>프런트엔드 개발자 지원서</h3>
+    <p>
+      HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+    </p>
+    <hr>
+    <h4>개인정보</h4>
+    <form>
+      <ul>
+        <li><label for="resume_name">이름</label><input type="text" id="resume_name"></li>
+        <li><label for="resume_tel">연락처</label><input type="tel" id="resume_tel"></li>
+      </ul>
+    </form>
+    <h4>지원 분야</h4>
+    <form>
+      <ul>
+        <li><label for="resume_opt1"></label><input type="radio" name="field" id="resume_opt1" value="opt1">웹 퍼블리싱</li>
+        <li><label for="resume_opt2"></label><input type="radio" name="field" id="resume_opt2" value="opt2">웹 애플리케이션 개발</li>
+        <li><label for="resume_opt3"></label><input type="radio" name="field" id="resume_opt3" value="opt3">개발 환경 개선</li>
+      </ul>
+    </form>
+    <h4>지원 동기</h4>
+    <form>
+      <ul>
+        <li>
+          <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요"></textarea>
+        </li>
+        <li>
+          <input type="button" value="접수하기"><input type="reset" value="다시 쓰기" >
+        </li>
+      </ul>
+      
+
+    </form>
+    
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
