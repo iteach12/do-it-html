@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Tags on Form</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">CSS Basic</h1>
+        <hr>
+        <p>
+            <ul class="css_ul">
+                <li>스타일과 스타일 시트</li>
+                <li>주요 선택자</li>
+                <li>캐스케이딩 스타일 시트</li>
+                <li>CSS3과 CSS 모듈</li>
+                
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h3>스타일과 스타일 시트</h3>
+    <hr>
+    <p>
+      CSS는 텍스트 생삭이나 크기, 이미지 크기나 위치, 표 색상, 배치 방법 등 웹 문서의 디자인 요소를 담당한다.
+    </p>
+    <p>
+      다양한 기기에 맞게 탄력적으로 바뀌는 문서를 만들 수 있다.
+    </p>
+    <p>
+      내부 스타일 시트 -> head 태그 안에 정의<br>
+      외부 스타일 시트 -> link로 css파일 연결<br>
+      css파일 임포트하기 -> @import url(/css/css_basic.css); 와 같이 사용
+    </p>
+
+    <h3>주요 선택자</h3>
+    <hr>
+    <ol class="css_ol" type="A">
+      <li>* 전체 선택자
+        <ol type="a">
+          <li>모든 요소에 적용할 때 사용</li>
+        </ol>
+      </li>
+      <li>태그 선택자
+        <ol type="a">
+          <li>특정 태그가 쓰인 모든 요소에 스타일 적용</li>
+        </ol>
+      </li>
+      <li>. 클래스 선택자
+        <ol type="a">
+          <li>클래스 이름은 태그 이름과 겹치면 안됨.</li>
+          <li>클래스 이름 앞에 .을 붙여야 함.</li>
+          <li>특정 태그에만 클래스 선택자를 적용하고 싶을 때는 <code>h2.accent</code>처럼 태그에 이어서 .을 찍고 클래스 이름을 적어준다.</li>
+        </ol>
+      </li>
+      <li># ID 선택자
+        <ol type="a">
+          <li>#을 붙여서 ID임을 나타내 준다.</li>
+        </ol>
+      </li>
+    </ol>
+    <h3>캐스케이딩</h3>
+    <hr>
+    <p>CSS에서 C는 캐스캐이딩의 약자로 위에서 아래로 흐르는 스타일 시트라는 뜻이다.</p>
+    <ul class="css_ul">
+      <li>
+        스타일 우선순위 : 스타일 규칙의 중요도, 적용 범위에 따라 우선순위가 결정되고 그 <mark><strong>우선순위에 따라 위에서 아래로 스타일이 적용</strong></mark>된다.
+      </li>
+      <li>
+        스타일 상속 : 태그들의 포함 관계에 따라 부모 요소의 스타일을 자식 요소로, <mark><strong>위에서 아래로 전달</strong></mark>
+      </li>
+    </ul>
+    <fieldset>
+      <legend>
+        스타일 시트의 우선순위
+      </legend>
+      <p>
+        <mark><strong>스타일 적용 범위가 좁을수록 즉, 정확히 필요한 요소에만 적용할 스타일일수록 우선 순위가 높다.</strong></mark></p>
+      <ol class="css_ol" type="1">
+        <li>인라인 스타일</li>
+        <li>id 스타일</li>
+        <li>클래스 스타일</li>
+        <li>태그 스타일</li>
+        <li><code>!important</code> 를 붙이면 가장 강력한 순위를 가짐.</li>
+      </ol>
+    </fieldset>
+
+    <h3>스타일 상속</h3>
+    <hr>
+    <p>
+      태그들의 포함 관계 중 포함하는 태그를 부모 요소, 포함된 태그를 자식요소라고 함.
+    </p>
+    <p>
+      자식 요소에서 별도로 스타일을 지정하지 않으면 부모 요소에 있는 스타일 속성들이 자식 요소로 전달되는데 이것을 '스타일 상속'이라고 함.
+    </p>
+    <p>
+      부모 요소의 모든 속성이 자식 요소에게 상속되는 것은 아니다. <br>
+      <small>(글자 색은 자식 요소로 상속되지만 배경 이미지나 배경 색은 상속되지 않는다.)</small>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
+

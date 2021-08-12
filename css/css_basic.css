@@ -1,0 +1,13 @@
+body {
+  color: blue;
+}
+
+p {
+  color: black;
+  font-weight: lighter;
+}
+
+.css_ul,
+.css_ol {
+  color: black;
+}
