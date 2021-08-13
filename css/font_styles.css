@@ -1,0 +1,42 @@
+/* 구글 웹 폰트 가져오기 방식(임포트?) */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+/* 이건 모든 p태그에 폰트를 일괄 저장한 방식 */
+p {
+  /* font-family: 'Gowun Batang', serif; */
+}
+
+/* 원하는 요소에만 폰트를 적용하기 위해 클래스 방식 활용 */
+.gowun_font {
+  font-family: 'Gowun Batang', 굴림;
+  font-weight: 700;
+}
+
+.esamanru_light_font {
+  font-family: 'esamanruLight', 굴림;
+}
+.esamanru_medium_font {
+  font-family: 'esamanruMedium', 굴림;
+}
+.esamanru_bold_font {
+  font-family: 'esamanruBold', 굴림;
+}
+
+/* 웹서버 임베딩 금지 */
+
+/* 웹서버 임베딩 가능 */
+@font-face {
+  font-family: 'esamanruLight';
+  src: url('/fonts/esamanruLight.woff') format('woff');
+  src: url('/fonts/esamanruLight.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'esamanruBold';
+  src: url('/fonts/esamanruBold.woff') format('woff');
+  src: url('/fonts/esamanruBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'esamanruMedium';
+  src: url('/fonts/esamanruMedium.woff') format('woff');
+  src: url('/fonts/esamanruMedium.woff2') format('woff2');
+}

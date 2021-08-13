@@ -9,14 +9,14 @@ footer {
   margin-top: 50px;
 }
 
-code {
+/* code {
   color: #e96900;
   background-color: #f8f8f8;
   font-size: 15px;
   padding: 3px;
   font-weight: bolder;
   border-radius: 5px;
-}
+} */
 
 .table__text thead th {
   background: #ccc;
