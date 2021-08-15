@@ -9,6 +9,10 @@ footer {
   margin-top: 50px;
 }
 
+a {
+  text-decoration: none;
+  color
+}
 /* code {
   color: #e96900;
   background-color: #f8f8f8;
@@ -21,4 +25,11 @@ footer {
 .table__text thead th {
   background: #ccc;
   border: 1px solid #222;
+}
+
+caption{
+  font-size: 1.5em;
+  text-decoration:underline;
+  color:darkslategray;
+  font-weight: bolder;
 }

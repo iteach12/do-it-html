@@ -26,10 +26,10 @@
         </p>
     </blockquote>
     
-    <h3>글꼴 관련 스타일</h3>
-    <h5>
+    <h1>글꼴 관련 스타일</h1>
+    <h3>
       font-familly 속성 - 기본 글꼴;
-    </h5>
+    </h3>
     <p>
       글자의 모양새. 내용에 알맞은 글꼴과 글자 크기, 굵기와 이탤릭체 여부 등에 대한 내용.
     </p>
@@ -43,9 +43,9 @@
       이는 컴퓨터에 설치된 기본 글꼴을 이용해 화면에 출력하는 방식이다. 뒤의 대괄호는 사용자에게 해당 글꼴이 없는 경우를 대비하여 2순위, 3순위... 등의 글꼴을 지정해 주는 것이다.
     </p>
     <hr>
-    <h5>
+    <h3>
       @font-face 속성 - 웹 폰트
-    </h5>
+    </h3>
     <blockquote>
       <a href="https://fonts.google.com">구글 웹 폰트</a>
     </blockquote>
@@ -82,9 +82,9 @@
       </p>
     </fieldset>
     <hr>
-    <h5>
+    <h3>
       font-size 속성 - 글자 크기 조정
-    </h5>
+    </h3>
     <table>
       <thead>
         <th>속성 값</th>
@@ -117,7 +117,7 @@
       <tbody>
         <tr>
           <th>em</th>
-          <td>해당 글꼴의 대문자 <mark>M</mark>의 너비를 기준으로 크기를 조절합니다.</td>
+          <td>해당 글꼴의 대문자 <mark>M</mark>의 너비를 기준으로 크기를 조절합니다. 1em = 16px</td>
         </tr>
         <tr>
           <th>ex</th>
@@ -135,7 +135,139 @@
         </tr>
       </tbody>
     </table>
+    <br>
+    <fieldset>
+      <legend>
+        em의 사용법
+      </legend>
+      <div style="font-size:20px;">
+        부모요소 font-size:20px;
+        <p style="font-size: 2em;">
+          부모의 font-size가 20px일 때, 자식 요소의 font-size가 <mark>1em</mark>이라면 그대로 20px에 맞춰서 출력되고, <mark>2em</mark>은 두 배, 3em은 세 배 등등
+        </p>
+      </div>
+    </fieldset>
+    <hr>
+
+    <h1>텍스트 스타일</h1>
+    <h3>color 속성</h3>
+    <p>
+      color 속성은 글자의 색깔을 나타낼 때 사용한다. rgb, 16진수, hsl 또는 색상 자체의 이름으로 나타낼 수 있다.
+    </p>
+    <pre>
+      <code>
+        h1{color:tgb(0,200,0)} 
+        h2{color:blue;}
+        .accent{
+          color:#ff0000; 
+        }
+      </code>
+    </pre>
+    <h3>text-decoration 속성</h3>
+    <table>
+      <caption>
+        text-decoration
+      </caption>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>none</th>
+          <td>밑줄을 표시하지 않는다.</td>
+        </tr>
+        <tr>
+          <th>underline</th>
+          <td>밑줄을 표시한다.</td>
+        </tr>
+        <tr>
+          <th>overline</th>
+          <td>영역 위로 선을 그린다.</td>
+        </tr>
+        <tr>
+          <th>line-through</th>
+          <td>영역을 가로지르는 선(취소 선)을 그린다.</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <fieldset>
+      <legend>
+        text-decoration 예시
+      </legend>
+      <p style="text-decoration: none;">
+        없음. a태그의 밑줄 지울 때 / text-decoration: none;
+      </p>
+      <p style="text-decoration: underline;">
+        밑줄 / text-decoration: underline;
+      </p>
+      <p style="text-decoration: line-through;">
+        취소선 / text-decoration: line-through;
+      </p>
+      <p style="text-decoration: overline;">
+        윗줄 / text-decoration: overline;
+      </p>
+
+    </fieldset>
     
+    <h3>text-transform 속성</h3>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>none</th>
+          <td>변환하지 않는다.</td>
+        </tr>
+        <tr>
+          <th>capitalize</th>
+          <td>시작하는 첫 번째 글자를 대문자로 변환한다.</td>
+        </tr>
+        <tr>
+          <th>uppercase</th>
+          <td>모든 글자를 대문자로 변환한다.</td>
+        </tr>
+        <tr>
+          <th>lowercase</th>
+          <td>모든 글자를 소문자로 변환한다.</td>
+        </tr>
+        <tr>
+          <th>fullwidth</th>
+          <td>가능한 모든 문자를 전각 문자로 변환한다.</td>
+        </tr>
+      </tbody>
+    </table>  
+    <fieldset>
+      <legend>
+        text-transform 예시
+      </legend>
+      <p style="text-transform: capitalize;">
+        Hello to the world. <br>
+        첫 글자를 대문자로.
+      </p>
+      <p style="text-transform: uppercase;">
+        Hello to the world. <br>
+        전부다 대문자로.
+      </p>
+      <p style="text-transform: lowercase;">
+        Hello to the world. <br>
+        전부다 소문자로.
+      </p>
+      <p style="text-transform:full-width;">
+        Hello to the world. <br>
+        전부다 전각자로. // ??
+      </p>
+    </fieldset>
+    <h3>text-shodow 속성</h3>
+    <p style="font-size:xx-large; text-shadow: 3px 3px 4px #f81;">
+    Hello world!</p>
+
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
