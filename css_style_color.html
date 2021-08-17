@@ -26,11 +26,246 @@
         </p>
     </blockquote>
     
-    <h3>색상 적용하기</h3>
-    <p class="text1">HTML+CSS+JAVASCRIPT</p>
-    <p class="text2">HTML+CSS+JAVASCRIPT</p>
-    <p class="text3">HTML+CSS+JAVASCRIPT</p>
-    <p class="text4">HTML+CSS+JAVASCRIPT</p>
+    <h1>색상 적용하기</h1>
+    <fieldset>
+      <legend>
+        16진수, rgb or rgba
+      </legend>
+      <p class="text1">HTML+CSS+JAVASCRIPT</p>
+      <p class="text2">HTML+CSS+JAVASCRIPT</p>
+      <p class="text3">HTML+CSS+JAVASCRIPT</p>
+      <p class="text4">HTML+CSS+JAVASCRIPT</p>
+    </fieldset>
+
+    <h1>배경 색과 배경 이미지</h1>
+    <h3>background-color 속성</h3>
+    <p>
+      ※ 스타일 상속에 의해서 부모 스타일은 자식 스타일로 똑같이 적용되지만 예외적으로 background-color값은 상속되지 않음.
+    </p>
+   
+
+    <h3>background-clip 속성</h3>
+    <p>
+      박스 모델 관점에서 배경 적용 범위를 조절할 수 있다. 기본값은 border-box
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>border-box</th>
+          <td>박스 모델의 가장 외곽인 테두리(border)까지 적용됨</td>
+        </tr>
+        <tr>
+          <th>padding-box</th>
+          <td>박스 모델에서 테두리를 뺀 페딩 범위까지 적용됨.</td>
+        </tr>
+        <tr>
+          <th>content-box</th>
+          <td>박스 모델에서 내용 부분에만 적용됨.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <div class="childdiv bd-box">
+        <h3>border-box</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quo maiores adipisci accusamus placeat repellat architecto maxime aliquam eligendi similique quasi, consectetur esse debitis, sapiente praesentium, labore sit incidunt nulla!
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="childdiv pd-box">
+        <h3>padding-box</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quo maiores adipisci accusamus placeat repellat architecto maxime aliquam eligendi similique quasi, consectetur esse debitis, sapiente praesentium, labore sit incidunt nulla!
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="childdiv ct_box">
+        <h3>content-box</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quo maiores adipisci accusamus placeat repellat architecto maxime aliquam eligendi similique quasi, consectetur esse debitis, sapiente praesentium, labore sit incidunt nulla!
+        </p>
+      </div>
+    </div>
+
+    <h3>background-image 속성</h3>
+    <p>
+      url을 사용하여 절대, 상대 경로를 넣어준다. 화면 크기보다 작은 이미지인 경우 자동으로 반복하여 넣어준다.
+    </p>
+    <div class="myimage">
+
+    </div>
+    <h3>background-repeat 속성</h3>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>repeat</th>
+          <td>브라우저 화면에 가득찰 때까지 가로와 세로로 반복.</td>
+        </tr>
+        <tr>
+          <th>repeat-x</th>
+          <td>브라우저 창 너비와 같아질 때까지 가로로 반복.</td>
+        </tr>
+        <tr>
+          <th>repeat-y</th>
+          <td>브라우저 창 높이와 같아질 때까지 세로로 반복.</td>
+        </tr>
+        <tr>
+          <th>no-repeat</th>
+          <td>반복 없음.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="myimage re">
+      <p style="font-size:2em; color:cornsilk">
+        repeat
+      </p>
+    </div>
+    <hr>
+    <div class="myimage re_x">
+      <p style="font-size:2em; color:cornsilk">
+        repeat-x
+      </p>
+    </div>
+    <hr>
+    <div class="myimage re_y">
+      <p style="font-size:2em; color:cornsilk">
+        repeat-y
+      </p>
+    </div>
+    <hr>
+    <div class="myimage no_re">
+      <p style="font-size:2em; color:cornsilk">
+        no-repeat
+      </p>
+    </div>
+    <hr>
+    <h3>background-size 속성</h3>
+    <p>
+      이미지가 화면보다 더 큰 경우 이미지를 여러 크기로 조절할 수 있다.
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>auto</th>
+          <td>원래 배경 이미지 크기 만큼 표시됨. 기본*</td>
+        </tr>
+        <tr>
+          <th>contain</th>
+          <td>요소 안에 배경 이미지가 다 들어오도록 이미지를 확대/축소 함.</td>
+        </tr>
+        <tr>
+          <th>cover</th>
+          <td>배경 이미지로 요소를 모두 덮도록 이미지를 확대/축소함.</td>
+        </tr>
+        <tr>
+          <th>크기값</th>
+          <td>너비, 높이 값을 지정. 둘 중 하나만 지정했을 땐 원래 크기를 기준으로 축소/확대하여 표시.</td>
+        </tr>
+        <tr>
+          <th>백분율</th>
+          <td>백분율로 지정.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div class="sizeimage image_auto">
+      <p style="font-size:2em; color:cornsilk">
+        auto
+      </p>
+    </div>
+    <hr>
+    <div class="sizeimage image_contain">
+      <p style="font-size:2em; color:cornsilk">
+        contain
+      </p>
+    </div>
+    <hr>
+    <div class="sizeimage image_cover">
+      <p style="font-size:2em; color:cornsilk">
+        cover
+      </p>
+    </div>
+    <hr>
+    <div class="sizeimage image_px">
+      <p style="font-size:2em; color:cornsilk">
+        px 500px 250px
+      </p>
+    </div>
+    <hr>
+    <div class="sizeimage image_percent">
+      <p style="font-size:2em; color:cornsilk">
+        percent 100% 100%
+      </p>
+      <p style="color:white; font-size: 1.4em; text-align: right;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatibus rerum aspernatur rem et molestias, eveniet beatae repellat illum similique dolor reiciendis doloremque sint repellendus accusamus, omnis modi impedit explicabo!
+      </p>
+    </div>
+    <hr>
+    <h3>
+      background-position 속성
+    </h3>
+    <p>
+      배경 이미지가 표시되는 위치를 조절할 수 있다.
+    </p>
+    <p>
+      수평, 수직 두 가지 수치를 넣어줘야 하는데, 하나만 넣는다면 수직위치 값은 자동으로 50% 또는 center로 간주된다.
+    </p>
+    <div>
+      <button id="bg1">
+        IDEA
+      </button>
+      <p>background-position: left</p>
+    </div>
+    <div>
+      <button id="bg2">
+        IDEA
+      </button>
+      <p>background-position: right</p>
+      
+    </div>
+    <hr>
+    <h3>background-origin 속성</h3>
+    <p>
+      background-position을 이용해서 이미지를 배치할 때 배치할 기준이 필요함. (background-clip 처럼)
+      이 기준을 origin으로 정함. 속성 값의 의미는 clip와 똑같음.
+    </p>
+
+    <hr>
+    <h3>background-attachment 속성</h3>
+    <p>
+      배경 이미지 고정하기. scroll과 fixed 속성을 활용.
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>scroll</th>
+          <td>화면 스크롤과 함께 배경 이미지도 스크롤 됨. 기본값</td>
+        </tr>
+        <tr>
+          <th>fixed</th>
+          <td>이미지 고정</td>
+        </tr>
+      </tbody>
+    </table>
+
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>

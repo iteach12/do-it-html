@@ -14,3 +14,95 @@ body {
 .text4 {
   color: rgba(255, 0, 255, 0.3);
 }
+
+.childdiv {
+  background-color: aqua;
+  width: 80%;
+  padding: 50px;
+  border: 9px dashed #211d21;
+}
+.bd-box {
+  background-clip: border-box;
+}
+.pd-box {
+  background-clip: padding-box;
+}
+.ct_box {
+  background-clip: content-box;
+}
+.myimage {
+  width: 90%;
+  height: 700px;
+  background-color: blue;
+  background-image: url('https://www.gannett-cdn.com/presto/2020/06/01/USAT/64705fac-ac8d-4d90-8e24-cedaca44f0d1-AP_Virus_Outbreak-Retaking_Waikiki.jpg?width=660&height=495&fit=crop&format=pjpg&auto=webp');
+}
+.re {
+  background-repeat: repeat;
+}
+.re_x {
+  background-repeat: repeat-x;
+}
+.re_y {
+  background-repeat: repeat-y;
+}
+.no_re {
+  background-repeat: no-repeat;
+}
+
+.sizeimage {
+  width: 50%;
+  height: 300px;
+  padding: 20px;
+  background-color: yellow;
+  background-image: url('https://afar-production.imgix.net/uploads/images/afar_post_headers/images/s6P1cWj2kE/original_hawaii_202019.jpg');
+  border: 5px dashed black;
+}
+.image_auto {
+  background-clip: border-box;
+  background-size: auto;
+}
+.image_contain {
+  background-clip: padding-box;
+  background-size: contain;
+}
+.image_cover {
+  background-size: cover;
+  background-clip: content-box;
+}
+.image_px {
+  background-clip: content-box;
+  background-size: 500px 250px;
+  background-repeat: no-repeat;
+}
+.image_percent {
+  background-clip: padding-box;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#bg1 {
+  background-image: url(/light.png);
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10%;
+  height: 30px;
+  color: white;
+  border-radius: 8px;
+  background-position: left;
+  padding: 3px;
+  background-origin: content-box;
+}
+#bg2 {
+  background-image: url(/light.png);
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10%;
+  height: 30px;
+  color: white;
+  border-radius: 8px;
+  background-position: right;
+  padding: 3px;
+  background-origin: content-box;
+}
