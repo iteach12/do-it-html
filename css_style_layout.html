@@ -69,6 +69,7 @@
     </div>
     <h5>inline 속성 값</h5>
     <p>li에 inline 속성을 줘서 옆으로 펼쳐지도록 표현.</p>
+    <p>li를 inline으로 했더니 역시 위 아래가 없지요?</p>
 
     <nav class="inline_nav">
       <ul>
@@ -80,7 +81,7 @@
     </nav>
     <h5>inline-block 속성 값</h5>
     <p>
-      그냥 inline 속성을 사용하면 너비, 위 아래 마진, 패딩, float 등을 사용할 수 없게 된다. 하지만 inline이면서 block요소의 속성들을 사용하고 싶을 땐? inline-block속성을 사용하면 된다.
+      그냥 inline 속성을 사용하면 <strong>너비나 높이, 위 아래 마진, 패딩, float</strong> 등을 사용할 수 없게 된다. 하지만 inline이면서 위의 속성들을 사용하고 싶을 땐? inline-block속성을 사용하면 된다.
     </p>
     <nav class="inline_block_nav">
       <ul>
@@ -91,8 +92,136 @@
       </ul>
     </nav>
 
-    <div></div>
+    <h5>none 속성 값</h5>
+    <p>
+      이 속성 값을 지정하면 해당 요소를 화면에 아예 표시하지 않는다. visibility:hidden도 비슷한 역할을 하는데, visibility 속성은 감추기만하고 자리는 차지하지만 none는 자리조차 없어진다 <small>(안드로이드의 gone 이구만?)</small>
+    </p>
 
+    <h1>테두리 관련 속성들</h1>
+    <h3>border-style 속성 - 테두리 스타일 지정하기</h3>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>none</th>
+          <td>기본값</td>
+        </tr>
+        <tr>
+          <th>hidden</th>
+          <td>테두리가 나타나지 않음. border-collapse:collapse일 경우, 다른 테두리도 표시되지 않음.</td>
+        </tr>
+        <tr>
+          <th>dashed</th>
+          <td>짧은 선</td>
+        </tr>
+        <tr>
+          <th>dotted</th>
+          <td>점선</td>
+        </tr>
+        <tr>
+          <th>double</th>
+          <td>이중선. border-width로 두 선 사이의 간격 조절.</td>
+        </tr>
+        <tr>
+          <th>groove</th>
+          <td>테두리를 창에 조각한 것처럼. 홈이 파인 듯 입체적으로 보임. border-width로 파인 정도를 조절할 수 있음.</td>
+        </tr>
+        <tr>
+          <th>inset</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>outset</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>ridge</th>
+          <td>테두리를 창에서 튀어나온 것처럼.</td>
+        </tr>
+        <tr>
+          <th>solid</th>
+          <td>국민border</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="bd_basic bd_none">
+      border-style:none;
+    </div>
+    <div class="bd_basic bd_hidden">
+      border-style:hidden;
+    </div>
+    <div class="bd_basic bd_dashed">
+      border-style:dashed;
+    </div>
+    <div class="bd_basic bd_dotted">
+      border-style:dotted;
+      border-width: 1px 2px 3px 4px;
+    </div>
+    <div class="bd_basic bd_double">
+      border-style:double;
+      border-width: 3px 1px;
+    </div>
+    <div class="bd_basic bd_groove">
+      border-style:groove;
+    </div>
+    <div class="bd_basic bd_inset">
+      border-style:inset;
+    </div>
+    <div class="bd_basic bd_outset">
+      border-style:outset;
+    </div>
+    <div class="bd_basic bd_ridge">
+      border-style:ridge;
+    </div>
+    <div class="bd_basic bd_solid">
+      border-style:solid;
+      border-width: 3px 6px;
+    </div>
+
+    <h3>border-width 속성 - 테두리 두께 지정하기</h3>
+    <p>
+      테두리 두께가 있어야 화면에 등장함. 지정하지 않으면 두께가 없기 때문에 어떤 스타일이든 화면에 표시될 수가 없겠지.
+    </p>
+    <p>
+      thin | medium | thick 세 가지 옵션 + 크기고정 방식
+    </p>
+    <p>
+      방향을 지정하지 않으면 border-width -> 네 방향 모두 같은 두께. border-top-width -> top border의 두께만 조절. <br>
+      border-width:1px 2px 3px 4px; 는 차례대로 위, 오른쪽, 아래, 왼쪽 <strong>시계방향으로 적용됨.</strong>
+
+    </p>
+    <p>
+      border-top-width, border-bottom-width, border-left-width, border-right-width 가 있음.
+    </p>
+    
+    <h3>원 만들기</h3>
+    <div id="my_circle">
+
+    </div>
+
+    <h1>여백을 조절하는 속성들</h1>
+    <h3>margin</h3>
+    <p>
+      좌우 값을 auto로 주면 자동으로 좌우 여백을 정해서 가운데 정렬해 시켜 준다. 
+    </p>
+    <div id="test_margin"></div>
+
+    <h3>margin overlap 마진 중첩 현상</h3>
+    <p>
+      <mark><strong>위, 아래의 마진이 서로 만날 때는 큰 마진 값으로 합쳐진다.</strong></mark> 좌우 마진은 합쳐지지 않는다.
+    </p>
+
+    <h3>연습문제</h3>
+    <ul>
+      <li class="quiz_1">떡볶이</li>
+      <li class="quiz_1">꼬깔콘</li>
+      <li class="quiz_1">홈런볼</li>
+      <li class="quiz_1">월드콘</li>
+    </ul>
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>

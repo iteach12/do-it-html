@@ -62,3 +62,73 @@ caption {
   display: inline-block;
   margin: 20px;
 }
+
+.bd_basic {
+  text-align: center;
+  width: 80%;
+  height: 30px;
+  margin: 10px;
+  background-color: burlywood;
+}
+.bd_none {
+  border-style: none;
+}
+.bd_hidden {
+  border-style: hidden;
+}
+.bd_dashed {
+  border-style: dashed;
+}
+.bd_dotted {
+  border-style: dotted;
+  border-width: 1px 2px 3px 4px;
+}
+.bd_double {
+  border-style: double;
+  border-width: 3px 1px;
+}
+.bd_groove {
+  border-style: groove;
+
+  border-width: 5px;
+  /* 
+  파인 정도를 조절할 수 있음.
+  border-width: 10px; 
+  */
+}
+.bd_inset {
+  border-style: inset;
+  border-width: 10px;
+}
+.bd_outset {
+  border-style: outset;
+  border-width: 10px;
+}
+.bd_ridge {
+  border-style: ridge;
+  border-width: 10px;
+}
+.bd_solid {
+  border-style: solid;
+  border-width: 3px 6px;
+}
+#my_circle {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  border: 3px solid red;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+#test_margin {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.quiz_1 {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: 10px;
+}
