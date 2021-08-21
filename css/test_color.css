@@ -80,7 +80,7 @@ body {
   background-repeat: no-repeat;
 }
 
-#bg1 {
+button {
   background-image: url(/light.png);
   background-color: blue;
   background-repeat: no-repeat;
@@ -89,20 +89,12 @@ body {
   height: 30px;
   color: white;
   border-radius: 8px;
-  background-position: left;
-  padding: 3px;
+  padding: 5px;
   background-origin: content-box;
 }
+#bg1 {
+  background-position: left;
+}
 #bg2 {
-  background-image: url(/light.png);
-  background-color: blue;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 10%;
-  height: 30px;
-  color: white;
-  border-radius: 8px;
   background-position: right;
-  padding: 3px;
-  background-origin: content-box;
 }
