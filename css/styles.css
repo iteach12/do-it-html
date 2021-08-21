@@ -33,3 +33,15 @@ caption {
   color: darkslategray;
   font-weight: bolder;
 }
+
+.reference_site {
+  color: indianred;
+  text-decoration: underline;
+}
+#block img {
+  display: block;
+  margin: 10px;
+}
+nav > ul li {
+  display: inline;
+}
