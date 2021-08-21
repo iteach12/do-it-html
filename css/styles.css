@@ -42,6 +42,23 @@ caption {
   display: block;
   margin: 10px;
 }
-nav > ul li {
+.inline_nav ul {
+  background-color: yellow;
+}
+.inline_nav ul li {
+  color: white;
+  background-color: blue;
+  background-clip: padding-box;
   display: inline;
+  margin: 20px;
+}
+.inline_block_nav ul {
+  background-color: yellow;
+}
+.inline_block_nav ul li {
+  color: white;
+  background-color: blue;
+  background-clip: padding-box;
+  display: inline-block;
+  margin: 20px;
 }
