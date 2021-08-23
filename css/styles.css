@@ -7,6 +7,7 @@ footer {
   background-color: DarkSalmon;
   color: white;
   margin-top: 50px;
+  clear: both;
 }
 
 a {
@@ -131,4 +132,28 @@ caption {
   border: 1px solid black;
   padding: 10px 20px;
   margin: 10px;
+}
+.box1 {
+  padding: 30px;
+  margin-right: 10px;
+  background-color: yellow;
+  float: left;
+}
+.box2 {
+  padding: 30px;
+  margin-right: 10px;
+  background-color: blue;
+  float: left;
+}
+
+.box3 {
+  padding: 30px;
+  margin-right: 10px;
+  background-color: red;
+  float: left;
+}
+.box4 {
+  padding: 30px;
+  clear: both;
+  background-color: green;
 }
