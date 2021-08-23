@@ -14,9 +14,9 @@
       .position_test{
         width:100px;
         height:50px;
-        
         margin-left:10px;
         background-color:blue;
+        
       }
       #po2{
         position:relative;
@@ -62,6 +62,46 @@
       #crd5{
         left:100px;
         top:100px;
+      }
+      .zindex_box{
+        width:150px;
+        height:150px;
+        background-color:blueviolet;
+      }
+      .zindex{
+        width:50px;
+        height:50px;
+        border:1px solid black;
+      }
+      #z1{
+        position:relative;
+        background-color: wheat;
+        z-index: 3;
+      }
+      #z2{
+        
+        position: relative;
+        left:10px;
+        top:-30px;
+        z-index: 1;
+        background-color: yellow;
+      }
+      #z3{
+        
+        position: relative;
+        left:30px;
+        top:-90px;
+        z-index: 1;
+        background-color: red;
+      }
+      .multi{
+        border:1px solid black;
+        padding:30px;
+        width:80%;
+        height: 450px;
+        margin: 0 auto;
+        column-count:3;
+        text-align: justify;
       }
     </style>
     <title>CSS layout</title>
@@ -181,6 +221,9 @@
     <h5>
       relative 속성
     </h5>
+    <p>
+      원래 있어야할 자리에서 조정. relative를 주지 않았다면 위치해 있어야 할 자리를 기준으로 조정.
+    </p>
     <div id="position_wrap">
       <div class="position_test" id="po1">
         position:static;
@@ -214,6 +257,87 @@
     <ul>
       <li><a href="/css_layout_fixed_test.html">확인하기</a></li>
     </ul>
+
+
+    <h3>Visibility 속성</h3>
+    <p>
+      visible은 기본 값. 화면에 요소를 표시함.
+      hidden은 요소를 감춘다. But, 자리는 유지됨.
+      collapse는 표의 행, 열, 행 그룹, 열 그룹 등에서 지정하면 서로 겹쳐지도록 조절해 줌. 그 외의 영역에서 사용하면 hidden 처럼 처리됨.
+      android의 gone과 같은 처리는 display:none;로 해준다.
+    </p>
+    <div>
+      <img src="/pic1.jpg" alt="pic1">
+      <img src="/pic2.jpg" alt="pic2" style="visibility:hidden;">
+      <img src="/pic3.jpg" alt="pic3">
+    </div>
+    <h3>z-index 속성 - 요소가 보이는 순서</h3>
+    <p>
+      z-index 값이 작을수록 아래에 쌓이고 값이 클수록 위에 쌓인다. z-index값을 명시하지 않았을 경우, 웹 문서에 맨 먼저 삽입하는 요소가 z-index:1값을 가지며 그 후 삽입하는 요소들은 점점 커진다. 
+    </p>
+    <div class="zindex_box">
+      <div class="zindex" id="z1">z1</div>
+      <div class="zindex" id="z2">z2</div>
+      <div class="zindex" id="z3">z3</div>
+    </div>
+
+    <h1>
+      다단으로 편집하기
+    </h1>
+    <h3>column-width - 단의 너비 고정하고 다단 구성하기</h3>
+    <p>
+      단의 너비가 일정하게 하면 화면의 크기에 따라서 단은 그대로 있되 단의 개수가 달라진다.
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>크기</th>
+          <td>단 너비를 직접 지정.</td>
+        </tr>
+        <tr>
+          <th>auto</th>
+          <td>단의 개수(column-count)같은 다른 속성에 따라 단의 너비가 자동 계산됨.</td>
+        </tr>
+
+      </tbody>
+    </table>
+    <h3>column-count - 단의 개수 고정하고 다단 구성하기</h3>
+    <p>
+      단의 개수가 달라지지 않는다. 고정해 두면. But, 화면의 크기에 따라서 단의 너비가 달라진다.
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>숫자</th>
+          <td>단 개수를 직접 지정.</td>
+        </tr>
+        <tr>
+          <th>auto</th>
+          <td>단의 너비(column-width)같은 다른 속성에 따라 단의 개수가 자동 계산됨.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="multi">
+      <p>사람은 든 청춘은 예가 사랑의 소리다.이것은 우리 있는가? 전인 실현에 착목한는 과실이 거선의 있으랴? 것은 부패를 공자는 꾸며 동산에는 더운지라 있는 할지라도 투명하되 쓸쓸하랴? 소리다.이것은 꽃이 날카로우나 수 타오르고 그리하였는가? 없으면, 만물은 길지 봄바람을 노년에게서 열매를 풍부하게 꽃 같으며, 봄바람이다. 시들어 이상 살았으며, 싸인 장식하는 곧 아름다우냐? 못할 설레는 공자는 사랑의 것이다. 그들의 부패를 노래하며 어디 석가는 있는가? 사랑의 가치를 용감하고 칼이다.
+
+        청춘의 예가 우리 봄바람이다. 우리 주는 가슴이 착목한는 풀이 것은 싸인 대한 부패를 약동하다. 이상 우리의 우는 피고, 소금이라 얼마나 것은 예수는 웅대한 그리하였는가? 이상의 인생을 이는 봄바람이다. 보이는 아니한 같이 지혜는 능히 예가 천자만홍이 힘있다. 있으며, 이상의 귀는 위하여 것이다.보라, 청춘의 위하여서. 이것은 착목한는 봄바람을 꽃이 이상의 천자만홍이 인도하겠다는 찾아 이상 때문이다. 청춘의 많이 위하여 있다. 수 얼마나 끝에 풀이 반짝이는 대한 그들의 봄바람이다. 있는 이는 사랑의 말이다.</p>
+      <p>사람은 든 청춘은 예가 사랑의 소리다.이것은 우리 있는가? 전인 실현에 착목한는 과실이 거선의 있으랴? 것은 부패를 공자는 꾸며 동산에는 더운지라 있는 할지라도 투명하되 쓸쓸하랴? 소리다.이것은 꽃이 날카로우나 수 타오르고 그리하였는가? 없으면, 만물은 길지 봄바람을 노년에게서 열매를 풍부하게 꽃 같으며, 봄바람이다. 시들어 이상 살았으며, 싸인 장식하는 곧 아름다우냐? 못할 설레는 공자는 사랑의 것이다. 그들의 부패를 노래하며 어디 석가는 있는가? 사랑의 가치를 용감하고 칼이다.
+
+        청춘의 예가 우리 봄바람이다. 우리 주는 가슴이 착목한는 풀이 것은 싸인 대한 부패를 약동하다. 이상 우리의 우는 피고, 소금이라 얼마나 것은 예수는 웅대한 그리하였는가? 이상의 인생을 이는 봄바람이다. 보이는 아니한 같이 지혜는 능히 예가 천자만홍이 힘있다. 있으며, 이상의 귀는 위하여 것이다.보라, 청춘의 위하여서. 이것은 착목한는 봄바람을 꽃이 이상의 천자만홍이 인도하겠다는 찾아 이상 때문이다. 청춘의 많이 위하여 있다. 수 얼마나 끝에 풀이 반짝이는 대한 그들의 봄바람이다. 있는 이는 사랑의 말이다.</p>
+      
+    </div>
+
+    
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
