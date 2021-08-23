@@ -5,7 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css">
-    
+    <style>
+      #position_wrap{
+        width: 100%;
+        height:200px;
+        background-color:yellow;
+      }
+      .position_test{
+        width:100px;
+        height:50px;
+        
+        margin-left:10px;
+        background-color:blue;
+      }
+      #po2{
+        position:relative;
+        left:-20px;
+        top:40px;
+        background-color: green;
+      }
+      #po3{
+        position:relative;
+        left:30px;
+        top:40px;
+        background-color: green;
+        
+      }
+      .absolute_test{
+        width:100%;
+        height:200px;
+        background-color:red;
+        position:relative;
+      }
+      .ab_box{
+        position:absolute;
+        width:40px;
+        height:40px;
+        background-color:white;
+      }
+      #crd1{
+        left:20px;
+        top:20px;
+      }
+      #crd2{
+        right:20px;
+        top:20px;
+      }
+      #crd3{
+        left:50px;
+        bottom:20px;
+      }
+      #crd4{
+        right:50px;
+        bottom:20px;
+      }
+      #crd5{
+        left:100px;
+        top:100px;
+      }
+    </style>
     <title>CSS layout</title>
   </head>
   <body>
@@ -92,9 +150,70 @@
     </ul>
 
     <h3>position 속성 - 배치 방법 지정하기</h3>
+    <p>
+      웹 문서 안의 요소들을 자유자재로 배치하기 위한 속성
+    </p>
+    <table>
+      <thead>
+        <th>속성 값</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>static</th>
+          <Td>요소를 문서의 흐름에 맞추어 배치. 기본값</Td>
+        </tr>
+        <tr>
+          <th>relative</th>
+          <Td>이전 요소에 자연스럽게 연결하되 위치를 조정할 수 있다.</Td>
+        </tr>
+        <tr>
+          <th>absolute</th>
+          <Td>원하는 위치에 지정하기. 단, 부모가 relative속성이어야 한다.</Td>
+        </tr>
+        <tr>
+          <th>fixed</th>
+          <Td>지정한 위치에 고정시키기.</Td>
+        </tr>
+      </tbody>
+    </table>
 
+    <h5>
+      relative 속성
+    </h5>
+    <div id="position_wrap">
+      <div class="position_test" id="po1">
+        position:static;
+      </div>
+      <div class="position_test" id="po2">
+        position:relative;
+        left:-20px;
+        top:40px;
+      </div>
+      <div class="position_test" id="po3">
+        position:relative;
+        left:30px;
+        top:40px;
+      </div>
 
+    </div>
 
+    <br>
+    <h5>absolute 속성 - 부모, 조상 중 relative를 기준으로</h5>
+    <div class="absolute_test">
+      <div class="ab_box" id="crd1">1</div>
+      <div class="ab_box" id="crd2">2</div>
+      <div class="ab_box" id="crd3">3</div>
+      <div class="ab_box" id="crd4">4</div>
+      <div class="ab_box" id="crd5">5</div>
+    </div>
+    <br>
+    <h5>
+      fixed 속성 - 브라우저 창 기준으로 배치
+    </h5>
+    <ul>
+      <li><a href="/css_layout_fixed_test.html">확인하기</a></li>
+    </ul>
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
