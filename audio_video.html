@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Audio & Video</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">Audio & Video</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>audio 태그</li>
+                <li>video 태그</li>
+                <li>source 태그</li>
+                <li>다양한 속성들</li>
+                <li>track 태그 (자막)</li>
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h1>audio 태그</h1>
+    <p>
+      오디오 파일을 가져온다. 대부분 mp3파일을 활용. 그 이외의 확장자를 사용할 이유가 굳이..?
+    </p>
+    <table>
+      <thead>
+        <th>속성</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>autoplay</th>
+          <td>자동재생</td>
+        </tr>
+        <tr>
+          <th>controls</th>
+          <td>웹 화면에 컨트롤 막대를 표시. 재생/멈춤, 진행 바, 볼륨 등이 나타남.</td>
+        </tr>
+        <tr>
+          <th>loop</th>
+          <td>오디오를 반복 재생</td>
+        </tr>
+        <tr>
+          <th>muted</th>
+          <td>오디오를 재생해 진행하지만 소리는 끈다.</td>
+        </tr>
+        <tr>
+          <th>preload</th>
+          <td>재생 버튼을 눌러 재생하기 전에 오디오 파일을 다운로드해 준비해 둔다.</td>
+        </tr>
+      </tbody>
+    </table>
+    <audio src="/thewholeother.mp3" controls>
+    </audio>
+
+    <h1>video 태그</h1>
+    <video src="/rainyday.mp4" style="width:400px;margin:10px auto; display:block;" controls></video>
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
