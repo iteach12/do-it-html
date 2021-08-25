@@ -1,5 +1,26 @@
 @import url(/css/css_basic.css);
 
+main {
+  width: 80%;
+  margin: 0 auto;
+  column-count: 2;
+}
+main h2,
+#main_util h2 {
+  float: left;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+#main_util {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main ul,
+#main_util ul {
+  clear: both;
+}
+
 footer {
   display: block;
   text-align: center;
