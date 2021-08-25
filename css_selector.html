@@ -69,6 +69,46 @@
     <h1>
       속성 선택자
     </h1>
+    <h3>[속성]선택자 - 지정한 속성에 스타일 적용하기</h3>
+    <p>
+      특정한 속성을 사용한 요소에 스타일을 적용하는 선택자. 대괄호 사이에 속성을 지정
+
+    </p>
+    <pre><code>
+      a[href]{
+        background:yellow;
+      }
+    </code></pre>
+    <h3>[속성=값]선택자 - 특정 값을 갖는 속성에 스타일 적용하기</h3>
+    <p>
+      속성 형식에서 더 나아가 일치하는 값을 가진 경우에만 스타일을 적용할 수도 있다.
+
+    </p>
+    <pre><code>
+      a[target="_blank"]{
+        padding-right:30px;
+        background:url(images/newwindow.png) no-repeat center right;
+      }
+    </code></pre>
+    <h3>
+      [속성 ~= 값] 선택자 - 여러 값 중 특정 값이 포함된 속성에 스타일 적용하기
+    </h3>
+    <p>
+      [속성=값]의 경우 정확히 일치하는 요소에만 적용되나, 틸드(~)와 함께 사용한 선택자
+      의 경우에는 해당 값이 포함된 요소를 선택하여 적용해 준다.
+      하지만, 값이 다르면 적용이 안되니 유의할 것.
+    </p>
+    <pre>
+      <code>
+        [class~="button"]{
+          border:2px solid black;
+          box-shadow:rgba(0, 0, 0, 0.4) 5px 5px;
+        }
+      </code>
+    </pre>
+
+
+
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
