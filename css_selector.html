@@ -5,6 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      
+      table{
+        text-align: center;
+      }
+      thead th{
+        border:1px solid black;
+      }
+      a:link{
+        
+        color:darkblue;
+        text-decoration:line-through;
+        
+      }
+      a:visited{
+        color:red;
+
+      }
+    </style>
     <title>CSS Selector</title>
   </head>
   <body>
@@ -106,8 +125,79 @@
         }
       </code>
     </pre>
+    <h3>속성 선택자 - 정리</h3>
+    <table>
+      <thead>
+        <th >기본형</th>
+        <th>스타일 적용 경우</th>
+        <th>예시 - 선택자</th>
+        <th>예시 - 적용되는 모습</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[속성]</td>
+          <td>지정한 '속성' 일 때</td>
+          <td>[href]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성=값]</td>
+          <td>'값'에 일치할 때</td>
+          <td>[target="_blank"]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성 ~= 값]</td>
+          <td>여러 값들 중 특정 '값'이 포함되어 있을 때(단어별)</td>
+          <td>[class~="button"]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성 |= 값]</td>
+          <td>'값'이 포함되어 있을 때(하이픈 포함 단어별)</td>
+          <td>[class |= "us"]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성 ^= 값]</td>
+          <td>'값'으로 시작할 때</td>
+          <td>[title ^= "eng"]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성 $= 값]</td>
+          <td>'값'으로 끝날 때</td>
+          <td>[href $= "xls"]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>[속성 *= 값]</td>
+          <td>'값'이 속성 값의 일부일 때</td>
+          <td>[href *= "w3"]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
 
+    <h1>가상 클래스와 가상 요소</h1>
+    <h3>사용자 동작에 반응하는 가상 클래스</h3>
+    <fieldset>
+      <legend>
+        :link - 방문하지 않은 링크에 스타일 적용
+      </legend>
+      <div>
+        <div style="
+          display:inline-block;
+          width:50%; height:100px; background-color:aqua;float: left;">
 
+          <a href="http://naver.com">홈페이지 이동</a>
+        </div>
+        <div style="display:inline-block;
+        width:50%; height:100px; background-color:burlywood; float: left;">
+          <a href="http://daum.net">홈페이지 이동</a>
+        </div>
+      </div>
+    </fieldset>
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
