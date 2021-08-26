@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>psedo_selector_test</title>
+
+    <style>
+      a:link{
+        color:red;
+        text-decoration: none;
+      }
+      a:visited{
+        color:cadetblue;
+        text-decoration:overline;
+      }
+      .hover_test div{
+        width:30px; 
+        height:30px;
+        background-color:yellow;
+      }
+      .hover_test div:hover{
+        
+        background-color:red;
+      }
+      .hover_test div:active{
+        background-color:cornsilk;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <a href="/css_selector.html">&laquo; back</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">psedo_selector_test</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>img</li>
+                <li>a</li>
+               
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <fieldset>
+      <legend>
+        :link - 방문하지 않은 링크에 스타일 적용
+      </legend>
+      <div>
+        <div style="
+          display:inline-block;
+          width:50%; height:100px; background-color:aqua;float: left;">
+
+          <a href="http://naver.com">홈페이지 이동</a>
+        </div>
+        <div style="display:inline-block;
+        width:50%; height:100px; background-color:burlywood; float: left;">
+          <a href="http://daum.net">홈페이지 이동</a>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        :hover - 웹 요소에 마우스 커서 올려 두었을 때
+      </legend>
+      <div>
+        <div class="hover_test" style="
+          display:inline-block;
+          width:50%; height:100px; background-color:aqua;float: left;">
+          <div ></div>
+          
+        </div>
+        <div style="display:inline-block;
+        width:50%; height:100px; background-color:burlywood; float: left;">
+          
+        </div>
+      </div>
+    </fieldset>
+
+
+
+  </body>
+</html>

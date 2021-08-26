@@ -13,16 +13,17 @@
       thead th{
         border:1px solid black;
       }
-      a:link{
-        
-        color:darkblue;
-        text-decoration:line-through;
-        
+     
+      table tr:nth-child(2n+1){
+        background-color:#ccc;
       }
-      a:visited{
-        color:red;
-
+      table tr:nth-child(2n+0){
+        background-color:rgba(234,252,63,0.2);
       }
+      table tr:nth-last-child(1){
+        background-color:red;
+      }
+      
     </style>
     <title>CSS Selector</title>
   </head>
@@ -181,24 +182,43 @@
 
     <h1>가상 클래스와 가상 요소</h1>
     <h3>사용자 동작에 반응하는 가상 클래스</h3>
-    <fieldset>
-      <legend>
-        :link - 방문하지 않은 링크에 스타일 적용
-      </legend>
-      <div>
-        <div style="
-          display:inline-block;
-          width:50%; height:100px; background-color:aqua;float: left;">
+    <a href="/psedo_selector_test.html" style="color:blue; text-decoration: underline;">테스트 확인하기</a>
+    
+    <p>
+      가상 선택자를 링크와 관련해 사용할 때는 순서가 중요하다. :link, :visited, :hover, :active가 순서대로
+      지정되어야 정상 작동한다.
+    </p>
 
-          <a href="http://naver.com">홈페이지 이동</a>
-        </div>
-        <div style="display:inline-block;
-        width:50%; height:100px; background-color:burlywood; float: left;">
-          <a href="http://daum.net">홈페이지 이동</a>
-        </div>
-      </div>
-    </fieldset>
+    <h3>UI 요소 상태에 따른 가상 클래스</h3>
+    <ol>
+      <li>:enabled와 :disabled - 해당 요쇼가 사용 가능한 상태일 때의 스타일은 enabled, 불가능한 상태일 때의 스타일은 disabled로 지정.
+      </li>
+      <li>:checked - 라디오나 체크 박스에서 해당 항목을 선택했을 때
+      </li>
+    </ol>
+    <h3>구조 가상 클래스</h3>
+    <ol>
+      <li>:root - 문서 전체에 적용하기</li>
+      <li>:nth-child(n)과 :nth-last-child(n) - 자식 요소의 위치에 따라 스타일 적용하기</li>
+      <li>:nth-of-type(n), :nth-last-of-type(n) - 특정 태그 위치에 스타일 적용하기</li>
+    </ol>
 
+    <table>
+      <tbody>
+        <tr><td>사과</td></tr>
+        <tr><td>자동차</td></tr>
+        <tr><td>오렌지</td></tr>
+        <tr><td>비행기</td></tr>
+        <tr><td>귤</td></tr>
+        <tr><td>기차</td></tr>
+        <tr><td>파인애플</td></tr>
+        <tr><td>오토바이</td></tr>
+        <tr><td>호박</td></tr>
+        <tr><td>자전거</td></tr>
+      </tbody>
+      
+
+    </table>
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
