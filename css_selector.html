@@ -23,7 +23,29 @@
       table tr:nth-last-child(1){
         background-color:red;
       }
-      
+      .hover_selector:hover{
+        border:3px solid black;
+      }
+      nav>ul {
+
+        border:1px solid black;
+      }
+      nav>ul li{
+        display:inline-block;
+        border:1px solid black;
+        
+        margin:15px 30px;
+      }
+
+      nav>ul>li>a:visited{
+        color:black;
+      }
+      nav>ul>li>a:hover{
+        color:blue;
+        font-weight: 900;
+        background-color:yellow;
+      }
+
     </style>
     <title>CSS Selector</title>
   </head>
@@ -219,6 +241,23 @@
       
 
     </table>
+
+
+    <h1>연습문제</h1>
+    <div>
+      <img class="hover_selector" src="/pic1.jpg" alt="pic1">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="https://naver.com" target="_blank">메뉴1</a></li>
+        <li><a href="https://naver.com" target="_blank">메뉴2</a></li>
+        <li><a href="https://naver.com" target="_blank">메뉴3</a></li>
+      </ul>
+    </nav>
+
+
+
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
           <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
