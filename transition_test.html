@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Tags on Form</title>
+
+    <style>
+      div{
+        width:200px;
+        height:100px;
+        background-color:aqua;
+        border:1px solid black;
+      }
+
+      #transition_dur{
+        /* 트랜지션 대상을 지정하기(all 또는 생략 하면 모두적용) */
+        transition-property:all;
+        transition-duration:1s;
+        /* 적용 대상 개수에 맞춰서 지연시간 입력, 만약 개수가 서로 맞지 않는다면 차례대로 반복하여 적용 */
+      }
+      #transition_dur:hover{
+        width:500px;
+        height:100px;
+      }
+      #transition_timing_linear{
+        transition-duration:2s;
+        transition-timing-function: linear;
+      }
+      #transition_timing_linear:hover{
+        width:500px;
+        height:100px;
+      }
+      #transition_timing_ease{
+        transition-duration:2s;
+        transition-timing-function: ease;
+      }
+      #transition_timing_ease:hover{
+        width:500px;
+        height:100px;
+      }
+      #transition_timing_ease_in{
+        transition-duration:2s;
+        transition-timing-function: ease-in;
+      }
+      #transition_timing_ease_in:hover{
+        width:500px;
+        height:100px;
+      }
+      #transition_timing_ease_out{
+        transition-duration:2s;
+        transition-timing-function: ease-out;
+      }
+      #transition_timing_ease_out:hover{
+        width:500px;
+        height:100px;
+      }
+      #transition_timing_ease_in_out{
+        transition-duration:2s;
+        transition-timing-function: ease-in-out;
+      }
+      #transition_timing_ease_in_out:hover{
+        width:500px;
+        height:100px;
+      }
+
+      #transition_delay{
+        transition-duration:2s;
+        transition-delay:1s;
+      }
+      #transition_delay:hover{
+        width:500px;
+        height:100px;
+      }
+      
+      #transition_once{
+        transition: all 2s ease 0.5s;
+      }
+      #transition_once:hover{
+        width:500px;
+        height:100px;
+
+      }
+
+      .box{
+        background-color:yellow;
+        transition:all 0.3s ease 0.2s;
+      }
+      .box:hover{
+        
+        background-color:red;
+        transform:translateX(150px) scale(2);
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <a href="/css_animation.html">&laquo; back</a>
+    
+    <blockquote>
+        <h1 id="top__image__page">Transistion Test</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>img</li>
+                <li>a</li>
+                <li>앵커</li>
+                <li>image map</li>
+                <li>svg</li>
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h1>transition-duration</h1>
+    <div id="transition_dur">
+
+    </div>
+    <h1>transition-timing-function</h1>
+    <div id="transition_timing_linear" style="font-size:2em; text-align: center;">
+      <p>
+        linear
+      </p>
+    </div>
+    <div id="transition_timing_ease" style="font-size:2em; text-align: center;">
+      <p>
+        ease
+      </p>
+    </div>
+    <div id="transition_timing_ease_in" style="font-size:2em; text-align: center;">
+      <p>
+        ease-in
+      </p>
+    </div>
+    <div id="transition_timing_ease_out" style="font-size:2em; text-align: center;">
+      <p>
+        ease-out
+      </p>
+    </div>
+    <div id="transition_timing_ease_in_out" style="font-size:2em; text-align: center;">
+      <p>
+        ease-in-out
+      </p>
+    </div>
+
+    <h1>transition-dalay</h1>
+    <div id="transition_delay" style="font-size:1.4em; text-align: center;">
+      transition-delay
+    </div>
+
+    <h1>transition 한 번에</h1>
+    <div id="transition_once" style="font-size:1.4em; text-align: center;">
+      transition
+    </div>
+
+    <h1>여러 효과를 동시에</h1>
+    <div class="box"></div>
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>

@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>CSS about animations</title>
     <style>
+      a:link { 
+        text-decoration: none; 
+        box-shadow: 0 -6px rgba(75, 112, 253, 0.3) 
+        inset;
+      } 
+      a:visited { 
+        text-decoration: none; 
+        box-shadow: 0 -6px rgba(140, 89, 185, 0.3) 
+        inset; 
+      } 
+      a { 
+        display: inline; 
+      }
       
-      
-      div{
-      width:400px;
-      height:400px;
-      perspective: 500px;
-    }
-    img{
-      transform:rotateX(50deg);
-      
-    }
-
      
     </style>
+
 
 
 
@@ -29,7 +32,7 @@
   <body>
     <a href="/index.html">&laquo; home</a>
     
-    <blockquote cite="https://www.daum.net">
+    <blockquote>
         <h1 id="top__image__page">CSS about Animations</h1>
         <hr>
         <p>
@@ -42,6 +45,9 @@
                 
             </ul>
         </p>
+        <cite>
+          Modified
+        </cite>
     </blockquote>
     
     <h1>transform</h1>
@@ -68,11 +74,6 @@
       </li>
     </ul>
     <h3>transform과 변형 함수</h3>
-    
-      <div>
-        <img src="https://site-cdn.givemesport.com/images/21/07/01/c397e18640e5930a5fb31fd34715c291/320.jpg" alt="" />
-      </div>
-    
     
     
     
@@ -134,9 +135,75 @@
       <li>perspective(원근법) 속성을 사용해야 입체감을
         느낄 수 있다.
       </li>
+      <li>
+        perspective 속성은 원근감을 주려는 div나 img의 <strong>부모요소에 적용해야 효과</strong>를 줄 수 있었다.
+      </li>
     </ul>
 
+    <h1>
+      변형과 관련된 속성들
+    </h1>
+    <h3>transform-origin 변형의 기준점 설정하기</h3>
+    <p>
+      x축, y축, z축이 아닌 다른 변형 기준을 설정할 때 사용.
+    </p>
+    <p>
+      left, center, right (x축)<br>
+      top, center, bottom (y축)<br>
+      길이 값만 사용 (z축)<br>
+    </p>
 
+    <h3>perspective, perspective-origin 원근감 표현하기 </h3>
+
+    <blockquote>
+      <p>
+        각종 transform test 적용해보기
+      </p>
+      <cite>
+        추가 필요
+      </cite>
+    </blockquote>
+    <h1>
+      transition
+
+    </h1>
+
+    <table>
+      <thead>
+        <th>속성</th>
+        <th>설명</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>transition-property</th>
+          <td>트랜지션 대상을 설정한다.</td>
+        </tr>
+        <tr>
+          <th>transition-duration</th>
+          <td>트랜지션 진행 시간을 설정.</td>
+        </tr>
+        <tr>
+          <th>transition-timing-function</th>
+          <td>트랜지션 속도 곡선을 설정한다.</td>
+        </tr>
+        <tr>
+          <th>transition-dalay</th>
+          <td>트랜지션 지연 시간을 설정.</td>
+        </tr>
+        <tr>
+          <th>transition</th>
+          <td>트랜지션 속성들을 한꺼번에 설정.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>
+        <a href="/transition_test.html">transition test 페이지</a>
+      </li>
+      
+    </ul>
+    
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
