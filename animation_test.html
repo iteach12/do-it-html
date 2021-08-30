@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Animation Test</title>
+
+    <style>
+     
+      #key_box{
+        width:100px;
+        height:100px;
+        background-color: blue;
+        animation-name:change-bg;
+        animation-duration:3s;
+      }
+      @keyframes change-bg{
+        from{
+          background-color: blue;
+          border:5px solid yellow;
+        }
+        to{
+          background-color:#a5d6ff;
+          border:1px solid blue;
+          border-radius: 50%;
+        }
+      }
+
+      .box{
+        width:100px;
+        height:100px;
+        background-color: blue;
+        display:inline-block;
+        
+      }
+      #name_box1{
+        animation-name:shape;
+        animation-duration:3s;
+      }
+      #name_box2{
+        
+        animation-name:circle;
+        animation-duration:3s;
+
+      }
+      @keyframes circle {
+        from{
+          
+          
+        }
+        to{
+          border-radius: 50%;
+          background-color: red;
+          margin-left:100px;
+        }
+      }
+
+      @keyframes shape{
+        from{
+
+        }
+        to{
+          transform:rotateZ(45deg);
+          margin-left:20px;
+        }
+      }
+
+
+      #animation_once{
+        animation:rotate 3s ease-in alternate infinite;
+
+      }
+
+      @keyframes rotate {
+        from{
+          transform:perspective(200px) rotateX(0deg) rotateY(0deg);
+        }
+        50%{
+          transform:perspective(200px) rotateX(-180deg) rotateY(0deg);
+        }
+        to{
+          margin-left:20px;
+          transform:perspective(200px) rotateX(-180deg) rotateY(180deg);
+          background-color: yellow;
+        }
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <a href="/css_animation.html">&laquo; back</a>
+    
+    <blockquote>
+        <h1 id="top__image__page">Animation Test</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>@keyframes</li>
+                
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h1>@keyframes</h1>
+
+    <div id="key_box"></div>
+    
+    <h1>animation-name</h1>
+    <div class="box" id="name_box1"></div>
+    <div class="box" id="name_box2"></div>
+
+
+    <h1>animation 한 번에</h1>
+    <div class="box" id="animation_once">
+
+    </div>
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
