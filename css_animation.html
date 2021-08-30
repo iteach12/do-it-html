@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>CSS about animations</title>
     <style>
-      .transform_img{
-        /* transform:translate(50px, 100px); */
-      }
-      .transform_img:hover{
-        /* transform:translate(5px, 10px);
-        border:5px dashed yellow; */
-      }
-      .transform_img:active{
-        /* transform:scale(2, 2); */
-        -webkit-transform:translate3d(50px, 50px, 500px);
-      }
-    </style>
+      
+      
+      div{
+      width:400px;
+      height:400px;
+      perspective: 500px;
+    }
+    img{
+      transform:rotateX(50deg);
+      
+    }
 
+     
+    </style>
 
 
 
@@ -67,7 +68,13 @@
       </li>
     </ul>
     <h3>transform과 변형 함수</h3>
-    <img class="transform_img" src="https://s1.playblackdesert.com/dokev/contents/img/og_img.jpg" alt="dokev" style="width:40%;">
+    
+      <div>
+        <img src="https://site-cdn.givemesport.com/images/21/07/01/c397e18640e5930a5fb31fd34715c291/320.jpg" alt="" />
+      </div>
+    
+    
+    
     
     
     <table>
@@ -124,6 +131,9 @@
 
     <ul>
       <li>3차원 변형함수 = 2차원 변형함수 + z축</li>
+      <li>perspective(원근법) 속성을 사용해야 입체감을
+        느낄 수 있다.
+      </li>
     </ul>
 
 
