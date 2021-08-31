@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <style>
+      #wrapper{
+        width:96%;
+        margin:0 auto;
+      }
+      header{
+        width:100%;
+        height:120px;
+        border:1px solid black;
+
+      }
+      .content{
+        float:left;
+        width:62.5%;
+        height:400px;
+        padding:1.5625%;
+        background-color: #ffd800;
+      }
+      .right-side{
+        float:right;
+        width:31.25%;
+        height:400px;
+        padding:1.5625%;
+        background-color:#00ff90;
+      }
+      .footer{
+        clear:both;
+        width:100%;
+        height:120px;
+        background-color:#c3590a;
+      }
+    </style>
+
+
+    <title>Responsable Web Basic</title>
+  </head>
+  <body>
+    <a href="/index.html">&laquo; home</a>
+    
+    <blockquote cite="https://www.daum.net">
+        <h1 id="top__image__page">Responsable Web Basic</h1>
+        <hr>
+        <p>
+            <ul>
+                <li>모바일 기기와 웹 디자인</li>
+                <li>가변 그리드 레이아웃</li>
+                <li>가변 레이아웃과 가변 요소</li>
+                
+            </ul>
+        </p>
+    </blockquote>
+    
+    <h1>모바일 기기와 웹 디자인</h1>
+    <p>
+      PC화면에서 보이는 내용을 모바일 기기에서 그대로 볼 수 없는 이유는 픽셀 표현 방법이 다르기 때문임.
+      이를 해결하기 위해서는 뷰포트를 지정해야 함. '뷰포트'란 스마트폰 화면에서 실제 내용이 표시되는 영역을 말함.
+    </p>
+
+    <p>
+      웹키트 기반의 모바일 브라우저들의 기본 뷰포트는 980px다. 따라서 이를 조절해 주어야 한다.
+    </p>
+    <table>
+      <thead>
+        <th>속성</th>
+        <th>설명</th>
+        <th>사용 가능한 값</th>
+        <th>기본 값</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>뷰포트 너비</td>
+          <td>device-width 또는 크기</td>
+          <td>브라우저 기본 값</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>뷰포트 높이</td>
+          <td>device-height</td>
+          <td>브라우저 기본 값</td>
+        </tr>
+        <tr>
+          <td>user-scalable</td>
+          <td>확대/축소 가능 여부</td>
+          <td>yes | no</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+          <td>initial-scale</td>
+          <td>초기 확대/축소 값</td>
+          <td>1~10</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>minimum-scale</td>
+          <td>최소 확대/축소 값</td>
+          <td>0~10</td>
+          <td>0.25</td>
+        </tr>
+        <tr>
+          <td>maximum-scale</td>
+          <td>최대 확대/축소 값</td>
+          <td>0~10</td>
+          <td>1.6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>가변 그리드 레이아웃</h1>
+    <h3>고정 그리드 레이아웃</h3>
+    <p>
+      그리드 시스템이란 화면을 몇 개의 컬럼(열)으로 나눠 관리하는 방식. 일관성을 유지할 수 있어 널리 사용된다.
+      960px로 고정하거나 1200px로 고정하는 것이 일반적. 12, 16, 24등 개수로 나누기도 한다.
+      가장 많이 사용하는 방식은 960픽셀의 12칼럼이다.
+    </p>
+    <h3>가변 그리드 레이아웃</h3>
+    <p>
+      고정 그리드 레이아웃은 너비가 고정되어 있기 때문에 다양한 디바이스의 크기에 반응하기 어렵다. 가변이란 너비값이 자유롭게
+      바뀌는 것을 의미. "px"이 아니라 "%"를 이용해서 디바이스의 크기에 맞게 너비가 변경되도록 만든다.
+    </p>
+
+    <div id="wrapper">
+      <header>
+        <h1>Fluid Grid Layout</h1>
+      </header>
+      <div class="content">
+        <img src="/battleimages/LP_geforce-rtx-battlefield2042-bundle_1920w_02.jpg" alt="battle1" style="max-width: 100%; height:auto;">
+      </div>
+      <div class="right-side">
+        <video src="/rainyday.mp4" style="max-width:100%; height:auto;" controls></video>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+    <h1>가변 레이아웃과 가변 요소</h1>
+    <h3>가변 글꼴</h3>
+    <p>
+      px단위로 글자 크기를 지정하면 화면에 따라서 의도치 않게 표시될 수 있다. 이를 해결하기 위해
+      em과 rem을 사용한다.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          em은 부모 요소에서 지정한 폰트의 대문자 M의 너비를 1em으로 지정한 것. 고로 부모 요소의 폰트 크기에 따라서 자식 요소의
+          폰트 크기가 달라진다.
+        </p>
+      </li>
+      <li>
+        <p>
+          rem의 경우 이러한 단점을 보완해 준다. root em으로 이해하면 된다. 기본이 되는 root의 크기를 일관성있게 사용하여 전체적인
+          크기 밸런스를 맞춘다. rem 쓰란 얘기임. 무조건은 아니고. <i style="text-decoration:underline;">Simon Collison 페이지는 em을 썼네....?</i>
+        </p>
+        
+      </li>
+    </ul>
+    <h3>
+      max-width:100%
+    </h3>
+    <p>
+      이미지나 동영상의 너비를 max-width:100%로 설정하면 요소 너비 값이 변할 때마다 이미지의 너비와 높이도 변경할 수 있다.
+    </p>
+    
+
+
+    <footer id="bottom__image__page">
+      <p>Author: SangJun Park<br>
+          <a href="mailto:iteach12@gmail.com">iteach12@gmail.com</a></p>
+  </footer>  
+  </body>
+</html>
