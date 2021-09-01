@@ -46,6 +46,15 @@
       <li>
         height:100vh는 ViewPort의 height를 100%로 주었다는 의미. 
       </li>
+      <li>
+        flex 컨테이너 안의 자식 요소도 flex 컨테이너가 될 수 있다. 단, flex 속성이 적용되는 범위는 flex 컨테이너의 자식까지만이다.
+        부모의 부모가 flex인 것은 손자에게 전해지지 않는다. 부모 요소가 flex여야만 자식 요소가 그 영향을 받는다.
+      </li>
+      <li>
+        flex-wrap:nowrap 기본값. flex는 width를 초기값으로 생각. nowrap인 경우 요소들을 한 줄에 위치시키기 위해서 width값을 무시
+        하게 된다. 반면, flex-wrap:wrap로 바꾸면 요소들을 여러 줄에 위치시킬 수 있게 되고 width값도 유지할 수 있게 된다.
+      </li>
+
     </ul>
 
 
@@ -58,7 +67,9 @@
 
     <h1>Flex Box Game</h1>
     <a href="https://flexboxfroggy.com/#ko" target="_blank" style="border: 1px solid black;">Flex Box Game</a>
-`
+
+    <h1>Flex Box Site</h1>
+    <a href="/flexbox_site.html" style="border: 1px solid black;">Flex Box Site</a>
 
     <footer id="bottom__image__page">
       <p>Author: SangJun Park<br>
